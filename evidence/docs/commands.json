@@ -1,0 +1,195 @@
+{
+  "implementation_commit": "82daad176f42d6989386b022f433ff9cc454fe4e",
+  "setup": "Existing project environment and cached 0.5B snapshot; independent fresh-clone replay is a separate hub card.",
+  "scratch": "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt",
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "--version"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.011,
+      "stdout": "uv 0.11.3 (45da18ac3 2026-04-01 aarch64-apple-darwin)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "--version"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.015,
+      "stdout": "Python 3.12.12\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "model_smoke.py",
+        "--download"
+      ],
+      "offline": false,
+      "exit_code": 0,
+      "seconds": 0.44,
+      "stdout": "{\"model\": \"Qwen/Qwen2.5-0.5B-Instruct\", \"revision\": \"7ae557604adf67be50417f59c2c2f167def9a775\", \"downloaded\": true}\n",
+      "stderr": "\nFetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]\nFetching 9 files: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 9/9 [00:00<00:00, 8754.35it/s]\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "pytest",
+        "-q"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.591,
+      "stdout": ".......................................                                  [100%]\n39 passed in 0.06s\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue",
+        "--help"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.037,
+      "stdout": "usage: datarescue [-h] {clean} ...\n\nClean a CSV against a declared schema.\n\nuv run python -m datarescue clean INPUT.csv --schema SCHEMA.json --out DIR [--decider model|baseline]\n\nWrites DIR/cleaned.csv, DIR/audit.jsonl and DIR/abstained.jsonl; the input is never written.\n\npositional arguments:\n  {clean}\n    clean     map headers and enum values to the schema, with an audit trail\n\noptions:\n  -h, --help  show this help message and exit\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue.eval",
+        "--decider",
+        "baseline",
+        "fixtures/heldout",
+        "--out",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/component-baseline.json"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.031,
+      "stdout": "{\"decider\": \"baseline\", \"fixture\": \"heldout\", \"scope\": \"component: header and value decisions scored separately, values routed by gold column\", \"total\": 45, \"correct_change\": 8, \"wrong_change\": 1, \"correct_abstain\": 13, \"unchanged_correct\": 1, \"missed\": 22, \"accuracy\": 0.489, \"change_precision\": 0.889, \"coverage\": 0.267}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue.e2e",
+        "--decider",
+        "baseline",
+        "fixtures/heldout",
+        "--out",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/e2e-baseline.json"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 0.038,
+      "stdout": "{\"decider\": \"baseline\", \"fixture\": \"heldout\", \"header\": {\"correct_change\": 2, \"wrong_change\": 0, \"correct_abstain\": 3, \"unchanged_correct\": 0, \"missed\": 5, \"needs_edit\": 7, \"change_precision\": 1.0, \"coverage\": 0.286}, \"cell\": {\"correct_change\": 12, \"wrong_change\": 4, \"correct_abstain\": 35, \"unchanged_correct\": 140, \"missed\": 79, \"needs_edit\": 91, \"change_precision\": 0.75, \"coverage\": 0.132}}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue",
+        "clean",
+        "fixtures/dev/input.csv",
+        "--schema",
+        "fixtures/dev/schema.json",
+        "--out",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/model",
+        "--decider",
+        "model"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 16.851,
+      "stdout": "{\n  \"decider\": \"model\",\n  \"header_changes\": 3,\n  \"cell_changes\": 26,\n  \"abstained\": 219,\n  \"input_sha256\": \"752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa\",\n  \"out\": \"/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/model\",\n  \"seconds\": 16.4\n}\n",
+      "stderr": "Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue.eval",
+        "--decider",
+        "model",
+        "fixtures/heldout",
+        "--out",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/component-model.json"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 17.899,
+      "stdout": "{\"decider\": \"model\", \"fixture\": \"heldout\", \"scope\": \"component: header and value decisions scored separately, values routed by gold column\", \"total\": 45, \"correct_change\": 9, \"wrong_change\": 1, \"correct_abstain\": 13, \"unchanged_correct\": 1, \"missed\": 21, \"accuracy\": 0.511, \"change_precision\": 0.9, \"coverage\": 0.3}\n",
+      "stderr": "Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-m",
+        "datarescue.e2e",
+        "--decider",
+        "model",
+        "fixtures/heldout",
+        "--out",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/e2e-model.json"
+      ],
+      "offline": true,
+      "exit_code": 0,
+      "seconds": 12.213,
+      "stdout": "{\"decider\": \"model\", \"fixture\": \"heldout\", \"header\": {\"correct_change\": 2, \"wrong_change\": 0, \"correct_abstain\": 3, \"unchanged_correct\": 0, \"missed\": 5, \"needs_edit\": 7, \"change_precision\": 1.0, \"coverage\": 0.286}, \"cell\": {\"correct_change\": 12, \"wrong_change\": 4, \"correct_abstain\": 35, \"unchanged_correct\": 140, \"missed\": 79, \"needs_edit\": 91, \"change_precision\": 0.75, \"coverage\": 0.132}}\n",
+      "stderr": "Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.\n"
+    },
+    {
+      "argv": [
+        "uv",
+        "run",
+        "--no-sync",
+        "python",
+        "-",
+        "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-docs-k9ra8mjt/model"
+      ],
+      "stdin": "import collections\nimport hashlib\nimport json\nimport sys\nfrom pathlib import Path\nfrom datarescue.tools import verify_audit\n\nout = Path(sys.argv[1])\nevents = [json.loads(line) for line in (out / \"audit.jsonl\").read_text().splitlines()]\nverify_audit(\"fixtures/dev/input.csv\", out / \"cleaned.csv\", events)\nprint(\"audit replay: passed\")\nprint(\"edit sources:\", dict(collections.Counter(event[\"decided_by\"] for event in events)))\nprint(\"model-selected edit:\", json.dumps(next(event for event in events if event[\"decided_by\"] == \"model\"), ensure_ascii=False))\nprint(\"input sha256:\", hashlib.sha256(Path(\"fixtures/dev/input.csv\").read_bytes()).hexdigest())",
+      "offline": true,
+      "exit_code": 0,
+      "stdout": "audit replay: passed\nedit sources: {'baseline': 26, 'model': 3}\nmodel-selected edit: {\"kind\": \"cell\", \"row\": 4, \"column\": 5, \"before\": \"M\u00e9xico\", \"after\": \"MX\", \"decided_by\": \"model\", \"score\": 0.6158, \"reason\": \"chose 'MX' with selection score 0.62\"}\ninput sha256: 752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa\n",
+      "stderr": ""
+    }
+  ]
+}

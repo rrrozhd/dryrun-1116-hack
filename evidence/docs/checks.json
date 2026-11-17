@@ -1,0 +1,52 @@
+{
+  "component-baseline.json": {
+    "matches_committed_json": true,
+    "reference": "results/baseline-heldout.json"
+  },
+  "component-model.json": {
+    "matches_committed_json": true,
+    "reference": "results/model-heldout.json"
+  },
+  "e2e-baseline.json": {
+    "matches_committed_json": true,
+    "reference": "results/e2e-baseline-heldout.json"
+  },
+  "e2e-model.json": {
+    "matches_committed_json": true,
+    "reference": "results/e2e-model-heldout.json"
+  },
+  "dev-cleaned.csv": {
+    "matches_committed_bytes": true,
+    "reference": "evidence/model/dev-run/cleaned.csv"
+  },
+  "dev-audit.jsonl": {
+    "matches_committed_bytes": true,
+    "reference": "evidence/model/dev-run/audit.jsonl"
+  },
+  "dev-abstained.jsonl": {
+    "matches_committed_bytes": true,
+    "reference": "evidence/model/dev-run/abstained.jsonl"
+  },
+  "walkthrough-inspection": {
+    "exit_code": 0
+  },
+  "pitch_words": 370,
+  "source_sha256": {
+    "datarescue/__init__.py": "6685fed9e290bc7df1aa5d59c82418d1f7e3540dcc7c5df06a823ecf813a8bfd",
+    "datarescue/__main__.py": "40f4adff7bc1d79b1f11d0e3cb8046aa7b9d6c6ff5572c3b51187509b6c96b39",
+    "datarescue/agent.py": "73ce4091c8593238a33f3fdc5d462940506c209880d90aec3c27357bd9767ac7",
+    "datarescue/baseline.py": "7275312b3fe98327bdddba18c8d25fbf65b0e5ee21142bedb5bd33e65b50eff0",
+    "datarescue/cli.py": "4f28e6335a5b250978072d958120b5997ccbd8734d93ca5265b86b64c816eee7",
+    "datarescue/e2e.py": "054fd4daaf54c487debc661df79361055e38a36302f47a704e50e67bbea10aca",
+    "datarescue/eval.py": "097e8d60031d65fe6a8170c6c6eaf2edc7d3e1a346c3fd02c818f6f99fd1097d",
+    "datarescue/model.py": "17e4dabb1f3304165810881498d109c2280aec36944d43d75093ba03d1ab5a81",
+    "datarescue/schema.py": "3ec2c3313077bef0536a6aab5f271ca73ce3e4bfa711786043d80361048482ae",
+    "datarescue/tools.py": "aca1b21bb0168a50bc2cd0dfd10789d8de40bd1e434f3a36e7929ed4d10a0e24"
+  },
+  "input_sha256": "752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa",
+  "heldout_sha256": {
+    "gold.json": "af7dc8cb488c4343e0d04952289f46f84a64264515909a359b7fadbcb01ccae3",
+    "input.csv": "82fc01de5b990a66c8042c71e34655fc5cfacee4fc58fa0dc538c47913e2aea1",
+    "schema.json": "cf8911f4f8eacb4980c108d10d2ed2f9dc131731dd641076e73eb351e350e26d"
+  }
+}
