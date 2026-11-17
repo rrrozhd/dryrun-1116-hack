@@ -1,0 +1,90 @@
+=== $ git clone --branch hub/ff1ea14b-c112-4f67-96e3-8a14c1137df6 https://github.com/rrrozhd/dryrun-1116-hack.git
+Cloning into 'dryrun-1116-hack'...
+=== exit=0 seconds=0
+=== $ git rev-parse HEAD
+15f93fb2e25142a0aa9b84e584edeeb8c850d17e
+=== exit=0 seconds=0
+=== $ uv sync --locked
+Using CPython 3.12.12
+Creating virtual environment at: .venv
+Resolved 48 packages in 0.68ms
+Installed 29 packages in 328ms
+ + certifi==2026.10.23
+ + charset-normalizer==3.5.2
+ + filelock==4.2.10
+ + fsspec==2026.9.0
+ + hf-xet==1.8.0
+ + huggingface-hub==0.36.2
+ + idna==3.20
+ + iniconfig==2.3.1
+ + jinja2==3.1.6
+ + markupsafe==3.0.4
+ + mpmath==1.3.0
+ + networkx==3.7
+ + numpy==2.5.5
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pygments==2.21.0
+ + pytest==9.2.0
+ + pyyaml==6.0.3
+ + regex==2026.11.15
+ + requests==2.34.2
+ + safetensors==0.8.0
+ + setuptools==84.2.1
+ + sympy==1.14.0
+ + tokenizers==0.21.4
+ + torch==2.7.1
+ + tqdm==4.70.1
+ + transformers==4.51.3
+ + typing-extensions==4.16.0
+ + urllib3==2.8.0
+=== exit=0 seconds=0
+=== $ uv run --no-sync python model_smoke.py --download
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files:  89%|████████▉ | 8/9 [00:00<00:00, 14.27it/s]Fetching 9 files: 100%|██████████| 9/9 [00:13<00:00,  1.50s/it]
+{"model": "Qwen/Qwen2.5-0.5B-Instruct", "revision": "7ae557604adf67be50417f59c2c2f167def9a775", "downloaded": true}
+=== exit=0 seconds=15
+RUN_DIR=/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf
+=== $ uv run --no-sync python -m datarescue clean fixtures/dev/input.csv --schema fixtures/dev/schema.json --out "$RUN_DIR/model" --decider model
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+{
+  "decider": "model",
+  "header_changes": 3,
+  "cell_changes": 26,
+  "abstained": 219,
+  "input_sha256": "752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa",
+  "out": "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/model",
+  "seconds": 28.9
+}
+=== exit=0 seconds=29
+=== $ uv run --no-sync python -m datarescue clean fixtures/dev/input.csv --schema fixtures/dev/schema.json --out "$RUN_DIR/baseline" --decider baseline
+{
+  "decider": "baseline",
+  "header_changes": 3,
+  "cell_changes": 23,
+  "abstained": 222,
+  "input_sha256": "752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa",
+  "out": "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/baseline",
+  "seconds": 0.0
+}
+=== exit=0 seconds=0
+=== $ uv run --no-sync pytest -q
+.......................................                                  [100%]
+39 passed in 0.07s
+=== exit=0 seconds=1
+=== $ HF_HUB_OFFLINE=1 uv run --no-sync python -m datarescue.eval --decider baseline fixtures/heldout --out "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/eval-baseline.json"
+{"decider": "baseline", "fixture": "heldout", "scope": "component: header and value decisions scored separately, values routed by gold column", "total": 45, "correct_change": 8, "wrong_change": 1, "correct_abstain": 13, "unchanged_correct": 1, "missed": 22, "accuracy": 0.489, "change_precision": 0.889, "coverage": 0.267}
+=== exit=0 seconds=0
+=== $ HF_HUB_OFFLINE=1 uv run --no-sync python -m datarescue.e2e --decider baseline fixtures/heldout --out "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/e2e-baseline.json"
+{"decider": "baseline", "fixture": "heldout", "header": {"correct_change": 2, "wrong_change": 0, "correct_abstain": 3, "unchanged_correct": 0, "missed": 5, "needs_edit": 7, "change_precision": 1.0, "coverage": 0.286}, "cell": {"correct_change": 12, "wrong_change": 4, "correct_abstain": 35, "unchanged_correct": 140, "missed": 79, "needs_edit": 91, "change_precision": 0.75, "coverage": 0.132}}
+=== exit=0 seconds=0
+=== $ HF_HUB_OFFLINE=1 uv run --no-sync python -m datarescue.eval --decider model fixtures/heldout --out "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/eval-model.json"
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+{"decider": "model", "fixture": "heldout", "scope": "component: header and value decisions scored separately, values routed by gold column", "total": 45, "correct_change": 9, "wrong_change": 1, "correct_abstain": 13, "unchanged_correct": 1, "missed": 21, "accuracy": 0.511, "change_precision": 0.9, "coverage": 0.3}
+=== exit=0 seconds=23
+=== $ HF_HUB_OFFLINE=1 uv run --no-sync python -m datarescue.e2e --decider model fixtures/heldout --out "/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/e2e-model.json"
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+{"decider": "model", "fixture": "heldout", "header": {"correct_change": 2, "wrong_change": 0, "correct_abstain": 3, "unchanged_correct": 0, "missed": 5, "needs_edit": 7, "change_precision": 1.0, "coverage": 0.286}, "cell": {"correct_change": 12, "wrong_change": 4, "correct_abstain": 35, "unchanged_correct": 140, "missed": 79, "needs_edit": 91, "change_precision": 0.75, "coverage": 0.132}}
+=== exit=0 seconds=14
+=== $ git status --porcelain
+=== exit=0 seconds=0
+=== DONE
