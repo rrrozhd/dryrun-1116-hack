@@ -28,7 +28,7 @@ def test_baseline_matches_close_spelling_and_abstains_on_unrelated():
 
 
 def test_fixtures_are_consistent():
-    for d in Path("fixtures").iterdir():
+    for d in (p for p in Path("fixtures").iterdir() if p.is_dir()):
         schema = json.loads((d / "schema.json").read_text(encoding="utf-8"))
         gold = json.loads((d / "gold.json").read_text(encoding="utf-8"))
         header = (d / "input.csv").read_text(encoding="utf-8").splitlines()[0]
