@@ -78,8 +78,10 @@ coordinates, output validation and audit guarantees. Start a custom schema from
 ## Results and reproducibility
 
 The threshold, prompt, model revision and option ordering were pinned on dev at
-`057f738` before the first held-out run. Replays keep that configuration. Fixtures
-are synthetic; this small evaluation is not a production accuracy guarantee.
+`057f738` before the first recorded model/cascade held-out evaluation (`644bc5a`).
+Baseline held-out results were recorded earlier, at `faed211`. Replays keep the
+frozen configuration. Fixtures are synthetic; this small evaluation is not a
+production accuracy guarantee.
 
 | Held-out evaluation | Baseline | Cascade (`model`) | Model only |
 | --- | ---: | ---: | ---: |
