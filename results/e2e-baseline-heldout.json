@@ -1,0 +1,815 @@
+{
+  "decider": "baseline",
+  "fixture": "heldout",
+  "scope": "end-to-end: CLI path, header-first, per cell",
+  "input_sha256": "82fc01de5b990a66c8042c71e34655fc5cfacee4fc58fa0dc538c47913e2aea1",
+  "header": {
+    "correct_change": 2,
+    "wrong_change": 0,
+    "correct_abstain": 3,
+    "unchanged_correct": 0,
+    "missed": 5,
+    "needs_edit": 7,
+    "change_precision": 1.0,
+    "coverage": 0.286
+  },
+  "cell": {
+    "correct_change": 12,
+    "wrong_change": 4,
+    "correct_abstain": 35,
+    "unchanged_correct": 140,
+    "missed": 79,
+    "needs_edit": 91,
+    "change_precision": 0.75,
+    "coverage": 0.132
+  },
+  "errors": [
+    {
+      "kind": "header",
+      "column": 0,
+      "raw": "Name (First Last)",
+      "output": "Name (First Last)",
+      "expected": "full_name",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 1,
+      "raw": "Email address",
+      "output": "Email address",
+      "expected": "contact_email",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 1,
+      "raw": "A positive",
+      "output": "A positive",
+      "expected": "A+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 2,
+      "raw": "O neg",
+      "output": "O neg",
+      "expected": "O-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 3,
+      "raw": "AB pos",
+      "output": "AB pos",
+      "expected": "AB+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 4,
+      "raw": "B negative",
+      "output": "B negative",
+      "expected": "B-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 5,
+      "raw": "0+",
+      "output": "0+",
+      "expected": "O+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 10,
+      "raw": "A positive",
+      "output": "A positive",
+      "expected": "A+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 11,
+      "raw": "O neg",
+      "output": "O neg",
+      "expected": "O-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 12,
+      "raw": "AB pos",
+      "output": "AB pos",
+      "expected": "AB+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 13,
+      "raw": "B negative",
+      "output": "B negative",
+      "expected": "B-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 14,
+      "raw": "0+",
+      "output": "0+",
+      "expected": "O+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 19,
+      "raw": "A positive",
+      "output": "A positive",
+      "expected": "A+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 20,
+      "raw": "O neg",
+      "output": "O neg",
+      "expected": "O-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 21,
+      "raw": "AB pos",
+      "output": "AB pos",
+      "expected": "AB+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 22,
+      "raw": "B negative",
+      "output": "B negative",
+      "expected": "B-",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 23,
+      "raw": "0+",
+      "output": "0+",
+      "expected": "O+",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 1,
+      "raw": "Medium",
+      "output": "Medium",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 5,
+      "raw": "XXL",
+      "output": "XL",
+      "expected": null,
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 7,
+      "raw": "Medium",
+      "output": "Medium",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 11,
+      "raw": "XXL",
+      "output": "XL",
+      "expected": null,
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 13,
+      "raw": "Medium",
+      "output": "Medium",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 17,
+      "raw": "XXL",
+      "output": "XL",
+      "expected": null,
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 19,
+      "raw": "Medium",
+      "output": "Medium",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 23,
+      "raw": "XXL",
+      "output": "XL",
+      "expected": null,
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 25,
+      "raw": "Medium",
+      "output": "Medium",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 4,
+      "raw": "When can you come?",
+      "output": "When can you come?",
+      "expected": "availability",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 1,
+      "raw": "Sat/Sun",
+      "output": "Sat/Sun",
+      "expected": "weekend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 2,
+      "raw": "weekday mornings",
+      "output": "weekday mornings",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 3,
+      "raw": "after work weekdays",
+      "output": "after work weekdays",
+      "expected": "weekday_evening",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 4,
+      "raw": "anytime",
+      "output": "anytime",
+      "expected": "any",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 5,
+      "raw": "Tuesdays 9am",
+      "output": "Tuesdays 9am",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 8,
+      "raw": "Sat/Sun",
+      "output": "Sat/Sun",
+      "expected": "weekend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 9,
+      "raw": "weekday mornings",
+      "output": "weekday mornings",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 10,
+      "raw": "after work weekdays",
+      "output": "after work weekdays",
+      "expected": "weekday_evening",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 11,
+      "raw": "anytime",
+      "output": "anytime",
+      "expected": "any",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 12,
+      "raw": "Tuesdays 9am",
+      "output": "Tuesdays 9am",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 15,
+      "raw": "Sat/Sun",
+      "output": "Sat/Sun",
+      "expected": "weekend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 16,
+      "raw": "weekday mornings",
+      "output": "weekday mornings",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 17,
+      "raw": "after work weekdays",
+      "output": "after work weekdays",
+      "expected": "weekday_evening",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 18,
+      "raw": "anytime",
+      "output": "anytime",
+      "expected": "any",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 19,
+      "raw": "Tuesdays 9am",
+      "output": "Tuesdays 9am",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 22,
+      "raw": "Sat/Sun",
+      "output": "Sat/Sun",
+      "expected": "weekend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 23,
+      "raw": "weekday mornings",
+      "output": "weekday mornings",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 24,
+      "raw": "after work weekdays",
+      "output": "after work weekdays",
+      "expected": "weekday_evening",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 25,
+      "raw": "anytime",
+      "output": "anytime",
+      "expected": "any",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 26,
+      "raw": "Tuesdays 9am",
+      "output": "Tuesdays 9am",
+      "expected": "weekday_morning",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 5,
+      "raw": "State of residence",
+      "output": "State of residence",
+      "expected": "home_state",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 1,
+      "raw": "NY State",
+      "output": "NY State",
+      "expected": "NY",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 2,
+      "raw": "N.J.",
+      "output": "N.J.",
+      "expected": "NJ",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 3,
+      "raw": "Conn.",
+      "output": "Conn.",
+      "expected": "CT",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 4,
+      "raw": "Pennsylvania",
+      "output": "Pennsylvania",
+      "expected": "PA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 7,
+      "raw": "NY State",
+      "output": "NY State",
+      "expected": "NY",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 8,
+      "raw": "N.J.",
+      "output": "N.J.",
+      "expected": "NJ",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 9,
+      "raw": "Conn.",
+      "output": "Conn.",
+      "expected": "CT",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 10,
+      "raw": "Pennsylvania",
+      "output": "Pennsylvania",
+      "expected": "PA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 13,
+      "raw": "NY State",
+      "output": "NY State",
+      "expected": "NY",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 14,
+      "raw": "N.J.",
+      "output": "N.J.",
+      "expected": "NJ",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 15,
+      "raw": "Conn.",
+      "output": "Conn.",
+      "expected": "CT",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 16,
+      "raw": "Pennsylvania",
+      "output": "Pennsylvania",
+      "expected": "PA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 19,
+      "raw": "NY State",
+      "output": "NY State",
+      "expected": "NY",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 20,
+      "raw": "N.J.",
+      "output": "N.J.",
+      "expected": "NJ",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 21,
+      "raw": "Conn.",
+      "output": "Conn.",
+      "expected": "CT",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 22,
+      "raw": "Pennsylvania",
+      "output": "Pennsylvania",
+      "expected": "PA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 25,
+      "raw": "NY State",
+      "output": "NY State",
+      "expected": "NY",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 26,
+      "raw": "N.J.",
+      "output": "N.J.",
+      "expected": "NJ",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 27,
+      "raw": "Conn.",
+      "output": "Conn.",
+      "expected": "CT",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 6,
+      "raw": "How did you hear about us?",
+      "output": "How did you hear about us?",
+      "expected": "referral_source",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 1,
+      "raw": "a friend told me",
+      "output": "a friend told me",
+      "expected": "friend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 2,
+      "raw": "Instagram",
+      "output": "Instagram",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 3,
+      "raw": "saw a poster",
+      "output": "saw a poster",
+      "expected": "flyer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 4,
+      "raw": "my company",
+      "output": "my company",
+      "expected": "employer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 5,
+      "raw": "facebook group",
+      "output": "facebook group",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 8,
+      "raw": "a friend told me",
+      "output": "a friend told me",
+      "expected": "friend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 9,
+      "raw": "Instagram",
+      "output": "Instagram",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 10,
+      "raw": "saw a poster",
+      "output": "saw a poster",
+      "expected": "flyer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 11,
+      "raw": "my company",
+      "output": "my company",
+      "expected": "employer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 12,
+      "raw": "facebook group",
+      "output": "facebook group",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 15,
+      "raw": "a friend told me",
+      "output": "a friend told me",
+      "expected": "friend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 16,
+      "raw": "Instagram",
+      "output": "Instagram",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 17,
+      "raw": "saw a poster",
+      "output": "saw a poster",
+      "expected": "flyer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 18,
+      "raw": "my company",
+      "output": "my company",
+      "expected": "employer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 19,
+      "raw": "facebook group",
+      "output": "facebook group",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 22,
+      "raw": "a friend told me",
+      "output": "a friend told me",
+      "expected": "friend",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 23,
+      "raw": "Instagram",
+      "output": "Instagram",
+      "expected": "social_media",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 24,
+      "raw": "saw a poster",
+      "output": "saw a poster",
+      "expected": "flyer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 25,
+      "raw": "my company",
+      "output": "my company",
+      "expected": "employer",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 6,
+      "record": 26,
+      "raw": "facebook group",
+      "output": "facebook group",
+      "expected": "social_media",
+      "outcome": "missed"
+    }
+  ]
+}

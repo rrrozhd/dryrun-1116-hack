@@ -1,0 +1,66 @@
+{
+  "fields": {
+    "full_name": {
+      "type": "string",
+      "description": "volunteer's full name"
+    },
+    "contact_email": {
+      "type": "string",
+      "description": "volunteer's email address"
+    },
+    "blood_type": {
+      "type": "enum",
+      "description": "ABO blood group with Rh factor",
+      "values": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-"
+      ]
+    },
+    "tshirt_size": {
+      "type": "enum",
+      "description": "adult t-shirt size",
+      "values": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    "availability": {
+      "type": "enum",
+      "description": "when the volunteer can attend",
+      "values": [
+        "weekday_morning",
+        "weekday_evening",
+        "weekend",
+        "any"
+      ]
+    },
+    "home_state": {
+      "type": "enum",
+      "description": "US state of residence (postal code)",
+      "values": [
+        "NY",
+        "NJ",
+        "CT",
+        "PA"
+      ]
+    },
+    "referral_source": {
+      "type": "enum",
+      "description": "how the volunteer heard about the drive",
+      "values": [
+        "friend",
+        "social_media",
+        "flyer",
+        "employer"
+      ]
+    }
+  }
+}

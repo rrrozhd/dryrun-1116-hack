@@ -1,0 +1,18 @@
+[project]
+name = "data-rescue"
+version = "0.0.1"
+description = "Local-model agent that maps messy CSV headers and enum values to a declared schema, with an audit trail"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch==2.7.1",
+    "transformers==4.51.3",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.pyright]
+include = ["datarescue", "model_smoke.py"]

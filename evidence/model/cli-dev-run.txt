@@ -1,0 +1,10 @@
+{
+  "decider": "model",
+  "header_changes": 3,
+  "cell_changes": 26,
+  "abstained": 219,
+  "input_sha256": "752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa",
+  "out": "evidence/model/dev-run",
+  "seconds": 31.3
+}
+exit 0 (python, captured without a pipe)
