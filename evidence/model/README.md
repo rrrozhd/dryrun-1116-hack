@@ -3,7 +3,11 @@
 All numbers below come from committed files in `results/`. These are the author's local
 runs. The reviewer's fresh-clone replay is separate evidence.
 
-## Frozen configuration (pinned at `057f738` before any held-out run)
+## Frozen configuration
+
+The configuration was pinned at `057f738` before the first recorded model/cascade
+held-out evaluation (`644bc5a`). Baseline held-out results were recorded earlier,
+at `faed211`.
 
 - `--decider model` is a **cascade**: the difflib baseline answers first, and the local model
   is asked only where difflib abstains. The audit's `decided_by` says which one made each change.
