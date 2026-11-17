@@ -8,7 +8,6 @@ that the mapping is correct.
 
 from __future__ import annotations
 
-import difflib
 import os
 from pathlib import Path
 from typing import Callable, Sequence
@@ -21,7 +20,7 @@ REVISION = "7ae557604adf67be50417f59c2c2f167def9a775"
 THRESHOLD = 0.5  # provisional; pinned from fixtures/dev only before the held-out run
 ORDERS = 2  # score forward and reversed option order, average, to cancel position bias
 CACHE = Path(__file__).resolve().parent.parent / ".models"
-MAX_OPTIONS = 9  # digits 1..9 are single tokens; 0 is "none/unsure"
+MAX_OPTIONS = 9  # digits 1..9 are single tokens; 0 is "none/unsure"; larger enums go in rounds
 
 SYSTEM = (
     "You map a messy value from a CSV file to one allowed value of a schema field. "
@@ -33,36 +32,31 @@ SYSTEM = (
 ProbsFn = Callable[[str, str, Sequence[str]], list[float]]
 
 
-def shortlist(raw: str, allowed: Sequence[str], k: int = MAX_OPTIONS) -> list[str]:
-    """Allowed values to show the model, in schema order.
-
-    shortcut: enums above 9 values are cut to the 9 closest by difflib ratio, so a
-    correct value that looks nothing like the raw one can be missed; upgrade to
-    multi-token option scoring if fixtures need large enums.
-    """
-    if len(allowed) <= k:
-        return list(allowed)
-    ratio = lambda a: difflib.SequenceMatcher(None, raw.lower(), a.lower()).ratio()
-    keep = set(sorted(allowed, key=ratio, reverse=True)[:k])
-    return [a for a in allowed if a in keep]
-
-
-def decide_with(probs_fn: ProbsFn, field_desc: str, allowed: Sequence[str], raw: str,
-                threshold: float = THRESHOLD, orders: int = ORDERS) -> dict:
-    """Average option probabilities over `orders` orderings, then pick or abstain."""
-    options = shortlist(raw, allowed)
-    if not options:
-        return {"value": None, "score": 0.0, "decided_by": "model", "reason": "no allowed values"}
+def _pick(probs_fn: ProbsFn, field_desc: str, raw: str, options: Sequence[str],
+          orders: int) -> tuple[str, float, float]:
+    """Best option, its score and the none/unsure score, averaged over `orders` orderings."""
     totals = {o: 0.0 for o in options}
     none = 0.0
-    for order in (options, options[::-1])[:orders]:
+    for order in (list(options), list(options)[::-1])[:orders]:
         probs = probs_fn(field_desc, raw, order)
         none += probs[0]
         for option, p in zip(order, probs[1:]):
             totals[option] += p
     best = max(options, key=totals.__getitem__)
-    score = totals[best] / orders
-    none /= orders
+    return best, totals[best] / orders, none / orders
+
+
+def decide_with(probs_fn: ProbsFn, field_desc: str, allowed: Sequence[str], raw: str,
+                threshold: float = THRESHOLD, orders: int = ORDERS) -> dict:
+    """Average option probabilities over `orders` orderings, then pick or abstain."""
+    options = list(allowed)
+    if not options:
+        return {"value": None, "score": 0.0, "decided_by": "model", "reason": "no allowed values"}
+    # More than 9 options: pick a winner per group of 9, then a final round among winners.
+    while len(options) > MAX_OPTIONS:
+        groups = [options[i:i + MAX_OPTIONS] for i in range(0, len(options), MAX_OPTIONS)]
+        options = [g[0] if len(g) == 1 else _pick(probs_fn, field_desc, raw, g, orders)[0] for g in groups]
+    best, score, none = _pick(probs_fn, field_desc, raw, options, orders)
     if score < threshold or none >= score:
         return {"value": None, "score": round(score, 4), "decided_by": "model",
                 "reason": f"abstain: best {best!r} {score:.2f}, none/unsure {none:.2f}"}
@@ -106,3 +100,14 @@ class ModelDecider:
 
     def decide(self, field_desc: str, allowed: Sequence[str], raw: str) -> dict:
         return decide_with(self.option_probs, field_desc, allowed, raw, self.threshold, self.orders)
+
+
+_decider: ModelDecider | None = None
+
+
+def decide(field_desc: str, allowed: Sequence[str], raw: str) -> dict:
+    """Module-level Decider used by `datarescue.eval --decider model`; loads the model on first use."""
+    global _decider
+    if _decider is None:
+        _decider = ModelDecider()
+    return _decider.decide(field_desc, allowed, raw)

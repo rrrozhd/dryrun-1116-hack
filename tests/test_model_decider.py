@@ -2,7 +2,7 @@
 
 import unittest
 
-from datarescue.model import decide_with, shortlist
+from datarescue.model import decide_with
 
 
 def stub(table):
@@ -42,15 +42,16 @@ class DecideTest(unittest.TestCase):
         self.assertIsNone(decide_with(stub({}), "state", [], "x")["value"])
 
 
-class ShortlistTest(unittest.TestCase):
-    def test_small_enum_kept_in_order(self):
-        self.assertEqual(shortlist("x", ["b", "a"]), ["b", "a"])
-
-    def test_large_enum_cut_to_nine_keeping_close_match(self):
+class LargeEnumTest(unittest.TestCase):
+    def test_more_than_nine_options_go_in_rounds(self):
         states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "MA", "NY"]
-        short = shortlist("Mass", states)
-        self.assertEqual(len(short), 9)
-        self.assertIn("MA", short)
+        seen = []
+        def probs_fn(field_desc, raw, options):
+            seen.append(len(options))
+            return stub({"MA": 0.9, "AL": 0.05})(field_desc, raw, options)
+        d = decide_with(probs_fn, "state", states, "Mass", threshold=0.5, orders=1)
+        self.assertEqual(d["value"], "MA")
+        self.assertTrue(all(n <= 9 for n in seen))
 
 
 if __name__ == "__main__":
