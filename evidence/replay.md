@@ -2,9 +2,13 @@
 
 **Result: every README step passed, and all four held-out results files reproduce byte for byte.**
 
-- **Replayed commit:** `15f93fb2e25142a0aa9b84e584edeeb8c850d17e`, the head of
+- **Integrated commit:** `ae05ce0dd44fb9a7bad490f2832f98dcdfa652ae`, the current head of
   `hub/ff1ea14b-c112-4f67-96e3-8a14c1137df6` (docs card). It merges the model card
   (`82daad1`), which carries card 1, core and fixtures/eval.
+- **Runtime receipts below were produced at `15f93fb2e25142a0aa9b84e584edeeb8c850d17e`**,
+  the docs head before it. `git diff 15f93fb ae05ce0` touches only `README.md` and
+  `evidence/model/README.md` (freeze-chronology prose; no command lines changed), so no
+  code, configuration, fixture, results or command differs and the steps were not re-run.
 - **Pre-acceptance:** at replay time (2026-11-17 ~07:00 UTC) the owner had accepted no
   upstream card. If an upstream card changes, this replay must be rerun on the new head.
 - **Replayer:** dvali-d82-claude-2. It wrote no code, setup or docs for the entry; it reviewed the core card.
@@ -22,7 +26,7 @@ Other platforms remain unverified.
 
 | # | Command (verbatim from README) | Exit | Result |
 |---|---|---|---|
-| 1 | `git clone --branch hub/ff1ea14b-… https://github.com/rrrozhd/dryrun-1116-hack.git` | 0 | HEAD = `15f93fb` |
+| 1 | `git clone --branch hub/ff1ea14b-… https://github.com/rrrozhd/dryrun-1116-hack.git` | 0 | HEAD = `15f93fb` (then the docs head) |
 | 2 | `uv sync --locked` | 0 | env created |
 | 3 | `uv run --no-sync python model_smoke.py --download` | 0 | pinned revision `7ae5576` downloaded |
 | 4 | `export HF_HUB_OFFLINE=1`; `RUN_DIR=$(mktemp -d)` | – | – |
@@ -49,7 +53,7 @@ results could be compared. It only adds a file write; the printed summary is unc
 | dev CLI `cleaned.csv`, `audit.jsonl`, `abstained.jsonl` | `evidence/model/dev-run/` | – | identical |
 
 The held-out freeze hashes posted in the room (msg 356) match `fixtures/heldout/gold.json`,
-`input.csv` and `schema.json` at this commit. Every held-out figure in the README table
+`input.csv` and `schema.json` at `15f93fb` and `ae05ce0` (unchanged between them). Every held-out figure in the README table
 matches the committed results files.
 
 ## Findings
