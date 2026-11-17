@@ -1,0 +1,5 @@
+$ uv run --frozen python -c import platform, sys; print(sys.version); print(platform.platform())
+3.12.12 (main, Dec  9 2025, 19:05:33) [Clang 21.1.4 ]
+macOS-26.5-arm64-arm-64bit
+
+exit_code=0

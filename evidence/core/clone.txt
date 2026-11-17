@@ -1,0 +1,5 @@
+$ git clone --no-hardlinks --single-branch --branch data-rescue-core /Users/dondoe/coding/dryrun-1116/codex-2 /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-core-check-a8ez1lcf/repo
+Cloning into '/var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-core-check-a8ez1lcf/repo'...
+done.
+
+exit_code=0
