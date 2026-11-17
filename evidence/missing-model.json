@@ -1,0 +1,7 @@
+{
+  "command": "HF_HUB_OFFLINE=1 uv run --no-sync python model_smoke.py",
+  "condition": "pinned model has not been downloaded",
+  "exit_code": 1,
+  "stdout": "",
+  "last_error_line": "huggingface_hub.errors.LocalEntryNotFoundError: Cannot find an appropriate cached snapshot folder for the specified revision on the local disk and outgoing traffic has been disabled. To enable repo look-ups and downloads online, pass 'local_files_only=False' as input."
+}
