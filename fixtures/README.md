@@ -13,4 +13,6 @@ uv run --no-project --python 3.12 python -m datarescue.eval --decider baseline f
 ```
 
 `--decider model` imports `datarescue.model.decide`, which the model card provides.
-Metrics: `correct_change`, `wrong_change`, `correct_abstain`, `missed`, `change_precision` and `coverage` (correct changes ÷ items whose gold is a real target).
+**Scope: these are component scores.** Header decisions and value decisions are scored separately, and values are routed to their gold column, so a failed header decision does not hide value errors here. End-to-end cleanup metrics come from the integrated header-first `apply` path (core + model cards).
+
+Metrics are classified by effective output; predicting the raw value counts as a no-op. They are `correct_change`, `wrong_change` (including any edit to an already-correct value), `correct_abstain`, `unchanged_correct`, `missed`, `change_precision` (no-ops excluded) and `coverage` (correct changes ÷ items whose gold differs from the raw value).

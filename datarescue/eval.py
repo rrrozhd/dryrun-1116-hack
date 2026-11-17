@@ -1,4 +1,8 @@
-"""Score a decider against a fixture's frozen gold labels.
+"""Component scores: a decider against a fixture's frozen gold labels.
+
+Header decisions and value decisions are scored separately; values are routed to their
+gold column, so these are not end-to-end cleanup results (those need the header-first
+apply path from the core and model cards).
 
 python -m datarescue.eval --decider baseline|model fixtures/heldout [--out metrics.json]
 """
@@ -21,32 +25,38 @@ def items(schema: dict, gold: dict):
             yield "value", field, fields[field]["description"], fields[field]["values"], raw, expected
 
 
-def outcome(predicted, expected) -> str:
+def outcome(raw: str, predicted, expected) -> str:
+    """Classify by effective output: predicting the raw value itself is a no-op, like abstaining."""
+    if predicted == raw:
+        predicted = None
+    if expected == raw:  # already correct: any edit is wrong
+        return "unchanged_correct" if predicted is None else "wrong_change"
     if predicted is None:
         return "correct_abstain" if expected is None else "missed"
     return "correct_change" if predicted == expected else "wrong_change"
 
 
 def score(decide, schema: dict, gold: dict) -> dict:
-    counts = dict.fromkeys(["correct_change", "wrong_change", "correct_abstain", "missed"], 0)
+    counts = dict.fromkeys(["correct_change", "wrong_change", "correct_abstain", "unchanged_correct", "missed"], 0)
     rows = []
     for kind, field, desc, allowed, raw, expected in items(schema, gold):
         d = decide(desc, allowed, raw)
         value = d["value"]
         if value is not None and value not in allowed:  # out-of-allowlist output never counts as a change
             value = None
-        o = outcome(value, expected)
+        o = outcome(raw, value, expected)
         counts[o] += 1
         rows.append({"kind": kind, "field": field, "raw": raw, "expected": expected, "predicted": value,
                      "score": d.get("score"), "outcome": o})
     total = len(rows)
     changes = counts["correct_change"] + counts["wrong_change"]
     return {"total": total, **counts,
-            "accuracy": round((counts["correct_change"] + counts["correct_abstain"]) / total, 3),
+            "accuracy": round((counts["correct_change"] + counts["correct_abstain"]
+                               + counts["unchanged_correct"]) / total, 3),
             "change_precision": round(counts["correct_change"] / changes, 3) if changes else None,
-            # share of items whose gold is a real target that the decider changed correctly
+            # share of items needing an edit (gold is a target different from raw) edited correctly
             "coverage": round(counts["correct_change"] / need, 3) if (need := sum(
-                r["expected"] is not None for r in rows)) else None,
+                r["expected"] not in (None, r["raw"]) for r in rows)) else None,
             "items": rows}
 
 
@@ -59,7 +69,9 @@ def main() -> None:
     decide = importlib.import_module(f"datarescue.{a.decider}").decide
     schema = json.loads((a.fixture / "schema.json").read_text(encoding="utf-8"))
     gold = json.loads((a.fixture / "gold.json").read_text(encoding="utf-8"))
-    result = {"decider": a.decider, "fixture": a.fixture.name, **score(decide, schema, gold)}
+    result = {"decider": a.decider, "fixture": a.fixture.name,
+              "scope": "component: header and value decisions scored separately, values routed by gold column",
+              **score(decide, schema, gold)}
     text = json.dumps(result, indent=2, ensure_ascii=False) + "\n"
     if a.out:
         a.out.write_text(text, encoding="utf-8")

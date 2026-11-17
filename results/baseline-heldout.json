@@ -1,14 +1,16 @@
 {
   "decider": "baseline",
   "fixture": "heldout",
+  "scope": "component: header and value decisions scored separately, values routed by gold column",
   "total": 45,
-  "correct_change": 9,
+  "correct_change": 8,
   "wrong_change": 1,
   "correct_abstain": 13,
+  "unchanged_correct": 1,
   "missed": 22,
   "accuracy": 0.489,
-  "change_precision": 0.9,
-  "coverage": 0.29,
+  "change_precision": 0.889,
+  "coverage": 0.267,
   "items": [
     {
       "kind": "header",
@@ -206,7 +208,7 @@
       "expected": "XL",
       "predicted": "XL",
       "score": 1.0,
-      "outcome": "correct_change"
+      "outcome": "unchanged_correct"
     },
     {
       "kind": "value",

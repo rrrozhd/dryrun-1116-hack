@@ -1,10 +1,12 @@
 {
   "decider": "baseline",
   "fixture": "dev",
+  "scope": "component: header and value decisions scored separately, values routed by gold column",
   "total": 43,
   "correct_change": 11,
   "wrong_change": 1,
   "correct_abstain": 10,
+  "unchanged_correct": 0,
   "missed": 21,
   "accuracy": 0.488,
   "change_precision": 0.917,
