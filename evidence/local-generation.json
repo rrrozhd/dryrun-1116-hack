@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "python": "3.12.12",
+  "torch": "2.7.1",
+  "transformers": "4.51.3",
+  "device": "cpu",
+  "dtype": "float32",
+  "do_sample": false,
+  "max_new_tokens": 64,
+  "prompt": "In one sentence, explain why ambiguous CSV values should remain unchanged.",
+  "response": "Ambiguous CSV values should be left as is to maintain the integrity and accuracy of data for further analysis or processing.",
+  "generated_tokens": 24,
+  "load_and_generate_seconds": 12.649
+}

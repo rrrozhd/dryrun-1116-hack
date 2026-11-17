@@ -1,0 +1,45 @@
+{
+    "version": "1.1.414",
+    "time": "1794876736222",
+    "generalDiagnostics": [
+        {
+            "file": "/Users/dondoe/coding/dryrun-1116/codex/model_smoke.py",
+            "severity": "error",
+            "message": "\"AutoModelForCausalLM\" is not exported from module \"transformers\"\n  Import from \"transformers.models.auto.modeling_auto\" instead",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 29
+                },
+                "end": {
+                    "line": 40,
+                    "character": 49
+                }
+            },
+            "rule": "reportPrivateImportUsage"
+        },
+        {
+            "file": "/Users/dondoe/coding/dryrun-1116/codex/model_smoke.py",
+            "severity": "error",
+            "message": "\"AutoTokenizer\" is not exported from module \"transformers\"\n  Import from \"transformers.models.auto.tokenization_auto\" instead",
+            "range": {
+                "start": {
+                    "line": 40,
+                    "character": 51
+                },
+                "end": {
+                    "line": 40,
+                    "character": 64
+                }
+            },
+            "rule": "reportPrivateImportUsage"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 1,
+        "errorCount": 2,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 1.689
+    }
+}

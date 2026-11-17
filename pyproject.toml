@@ -1,0 +1,12 @@
+[project]
+name = "data-rescue"
+version = "0.0.1"
+description = "Local-model prerequisite for the Data Rescue hackathon entry"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "torch==2.7.1",
+    "transformers==4.51.3",
+]
+
+[tool.pyright]
+include = ["model_smoke.py"]
