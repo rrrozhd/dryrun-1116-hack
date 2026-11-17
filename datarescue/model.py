@@ -12,12 +12,14 @@ import os
 from pathlib import Path
 from typing import Callable, Sequence
 
+from datarescue import baseline
+
 # Never send an ambient Hugging Face login token; generation is offline.
 os.environ["HF_HUB_DISABLE_IMPLICIT_TOKEN"] = "1"
 
 MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
 REVISION = "7ae557604adf67be50417f59c2c2f167def9a775"
-THRESHOLD = 0.5  # provisional; pinned from fixtures/dev only before the held-out run
+THRESHOLD = 0.35  # pinned on fixtures/dev only: middle of the 0.30-0.40 plateau (0.25 adds 2 wrong changes)
 ORDERS = 2  # score forward and reversed option order, average, to cancel position bias
 CACHE = Path(__file__).resolve().parent.parent / ".models"
 MAX_OPTIONS = 9  # digits 1..9 are single tokens; 0 is "none/unsure"; larger enums go in rounds
@@ -106,8 +108,12 @@ _decider: ModelDecider | None = None
 
 
 def decide(field_desc: str, allowed: Sequence[str], raw: str) -> dict:
-    """Module-level Decider used by `datarescue.eval --decider model`; loads the model on first use."""
+    """Agent decider (`--decider model`): the difflib baseline answers first; the local model is
+    asked only where the baseline abstains. `decided_by` records which one made each choice."""
     global _decider
+    d = baseline.decide(field_desc, list(allowed), raw)
+    if d["value"] is not None:
+        return d
     if _decider is None:
         _decider = ModelDecider()
     return _decider.decide(field_desc, allowed, raw)

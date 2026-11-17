@@ -54,5 +54,33 @@ class LargeEnumTest(unittest.TestCase):
         self.assertTrue(all(n <= 9 for n in seen))
 
 
+class CascadeTest(unittest.TestCase):
+    """Module-level decide: baseline first, model only where the baseline abstains."""
+
+    def setUp(self):
+        import datarescue.model as m
+        self.m, self.saved, self.calls = m, m._decider, []
+        test = self
+
+        class Stub:
+            def decide(self, field_desc, allowed, raw):
+                test.calls.append(raw)
+                return {"value": "shipped", "score": 0.8, "decided_by": "model", "reason": "stub"}
+        m._decider = Stub()
+
+    def tearDown(self):
+        self.m._decider = self.saved
+
+    def test_baseline_match_skips_model(self):
+        d = self.m.decide("status", ["open", "shipped"], "Shipped ")
+        self.assertEqual((d["value"], d["decided_by"]), ("shipped", "baseline"))
+        self.assertEqual(self.calls, [])
+
+    def test_model_answers_where_baseline_abstains(self):
+        d = self.m.decide("status", ["open", "shipped"], "dispatched")
+        self.assertEqual((d["value"], d["decided_by"]), ("shipped", "model"))
+        self.assertEqual(self.calls, ["dispatched"])
+
+
 if __name__ == "__main__":
     unittest.main()

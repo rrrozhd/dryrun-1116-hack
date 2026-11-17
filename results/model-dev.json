@@ -1,0 +1,403 @@
+{
+  "decider": "model",
+  "fixture": "dev",
+  "scope": "component: header and value decisions scored separately, values routed by gold column",
+  "total": 43,
+  "correct_change": 13,
+  "wrong_change": 1,
+  "correct_abstain": 10,
+  "unchanged_correct": 0,
+  "missed": 19,
+  "accuracy": 0.535,
+  "change_precision": 0.929,
+  "coverage": 0.394,
+  "items": [
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "E-mail Addr",
+      "expected": "customer_email",
+      "predicted": null,
+      "score": 0.1923,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Order Placed",
+      "expected": "order_date",
+      "predicted": null,
+      "score": 0.2084,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Pmt Status",
+      "expected": "payment_status",
+      "predicted": "payment_status",
+      "score": 0.75,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Ship via",
+      "expected": "shipping_method",
+      "predicted": null,
+      "score": 0.2033,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Sz",
+      "expected": "size",
+      "predicted": "size",
+      "score": 0.667,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Dest. Country",
+      "expected": "ship_country",
+      "predicted": "ship_country",
+      "score": 0.64,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Internal memo",
+      "expected": null,
+      "predicted": null,
+      "score": 0.08,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Gift wrap?",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1575,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "PAID",
+      "expected": "paid",
+      "predicted": "paid",
+      "score": 1.0,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "Paid in full",
+      "expected": "paid",
+      "predicted": null,
+      "score": 0.2778,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "settled",
+      "expected": "paid",
+      "predicted": null,
+      "score": 0.2458,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "awaiting payment",
+      "expected": "unpaid",
+      "predicted": null,
+      "score": 0.2445,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "not paid",
+      "expected": "unpaid",
+      "predicted": "unpaid",
+      "score": 0.714,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "refund issued",
+      "expected": "refunded",
+      "predicted": "refunded",
+      "score": 0.762,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "partial refund",
+      "expected": "partially_refunded",
+      "predicted": "partially_refunded",
+      "score": 0.812,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "disputed - chargeback",
+      "expected": "chargeback",
+      "predicted": "chargeback",
+      "score": 0.645,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "on hold",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1862,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "payment_status",
+      "raw": "N/A",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1246,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "Std",
+      "expected": "standard",
+      "predicted": null,
+      "score": 0.2629,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "standard ground",
+      "expected": "standard",
+      "predicted": "standard",
+      "score": 0.696,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "Express 2-day",
+      "expected": "express",
+      "predicted": "express",
+      "score": 0.7,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "next day air",
+      "expected": "overnight",
+      "predicted": "overnight",
+      "score": 0.4797,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "pick up in store",
+      "expected": "store_pickup",
+      "predicted": null,
+      "score": 0.2094,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "BOPIS",
+      "expected": "store_pickup",
+      "predicted": null,
+      "score": 0.2102,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "drone",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2104,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "shipping_method",
+      "raw": "TBD",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1868,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "small",
+      "expected": "S",
+      "predicted": null,
+      "score": 0.3105,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "Med",
+      "expected": "M",
+      "predicted": null,
+      "score": 0.2929,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "large",
+      "expected": "L",
+      "predicted": null,
+      "score": 0.2096,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "X-Large",
+      "expected": "XL",
+      "predicted": null,
+      "score": 0.2157,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "2XL",
+      "expected": "XXL",
+      "predicted": "XL",
+      "score": 0.8,
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "extra small",
+      "expected": "XS",
+      "predicted": null,
+      "score": 0.2553,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "one size",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2468,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "size",
+      "raw": "32",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2088,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "USA",
+      "expected": "US",
+      "predicted": "US",
+      "score": 0.8,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "United States",
+      "expected": "US",
+      "predicted": null,
+      "score": 0.1769,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "Canada",
+      "expected": "CA",
+      "predicted": null,
+      "score": 0.272,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "México",
+      "expected": "MX",
+      "predicted": "MX",
+      "score": 0.6158,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "UK",
+      "expected": "GB",
+      "predicted": null,
+      "score": 0.1893,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "Deutschland",
+      "expected": "DE",
+      "predicted": null,
+      "score": 0.229,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "France",
+      "expected": "FR",
+      "predicted": null,
+      "score": 0.1736,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "Holland",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1682,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "ship_country",
+      "raw": "EU",
+      "expected": null,
+      "predicted": null,
+      "score": 0.126,
+      "outcome": "correct_abstain"
+    }
+  ]
+}

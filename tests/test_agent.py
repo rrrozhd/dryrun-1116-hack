@@ -22,9 +22,9 @@ class PlanTest(unittest.TestCase):
 
     def test_maps_headers_then_distinct_enum_values(self):
         profile = {"columns": [
-            {"index": 0, "header": "Order Status", "values": {"open": 2, "dispatched": 1, "lost": 1, "": 3}},
-            {"index": 1, "header": "email", "values": {"a@x": 1}},
-            {"index": 2, "header": "memo", "values": {"hi": 1}},
+            {"column": 0, "header": "Order Status", "values": {"open": 2, "dispatched": 1, "lost": 1, "": 3}},
+            {"column": 1, "header": "email", "values": {"a@x": 1}},
+            {"column": 2, "header": "memo", "values": {"hi": 1}},
         ]}
         header_map, value_maps = plan(profile, FIELDS, self.decide)
         self.assertEqual(header_map[0]["value"], "status")
