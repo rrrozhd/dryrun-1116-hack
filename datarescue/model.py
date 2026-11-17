@@ -86,7 +86,7 @@ class ModelDecider:
             snapshot, local_files_only=True, token=False, trust_remote_code=False)
         self.model = AutoModelForCausalLM.from_pretrained(
             snapshot, local_files_only=True, token=False, trust_remote_code=False,
-            use_safetensors=True, torch_dtype=torch.float32).to("cpu").eval()
+            use_safetensors=True, torch_dtype="float32").to("cpu").eval()
         self.digit_ids = [self.tokenizer.encode(str(i))[0] for i in range(MAX_OPTIONS + 1)]
 
     def option_probs(self, field_desc: str, raw: str, options: Sequence[str]) -> list[float]:
@@ -98,7 +98,7 @@ class ModelDecider:
         with self._torch.inference_mode():
             logits = self.model(**inputs).logits[0, -1]
         ids = self.digit_ids[: len(options) + 1]
-        return self._torch.softmax(logits[ids], dim=0).tolist()
+        return logits[ids].softmax(dim=0).tolist()
 
     def decide(self, field_desc: str, allowed: Sequence[str], raw: str) -> dict:
         return decide_with(self.option_probs, field_desc, allowed, raw, self.threshold, self.orders)

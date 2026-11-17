@@ -66,10 +66,10 @@ class CascadeTest(unittest.TestCase):
             def decide(self, field_desc, allowed, raw):
                 test.calls.append(raw)
                 return {"value": "shipped", "score": 0.8, "decided_by": "model", "reason": "stub"}
-        m._decider = Stub()
+        setattr(m, "_decider", Stub())
 
     def tearDown(self):
-        self.m._decider = self.saved
+        setattr(self.m, "_decider", self.saved)
 
     def test_baseline_match_skips_model(self):
         d = self.m.decide("status", ["open", "shipped"], "Shipped ")
