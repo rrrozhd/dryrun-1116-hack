@@ -1,0 +1,14 @@
+[project]
+name = "data-rescue"
+version = "0.0.1"
+requires-python = ">=3.11,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.pyright]
+include = ["datarescue"]
