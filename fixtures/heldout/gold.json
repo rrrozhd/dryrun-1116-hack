@@ -1,0 +1,61 @@
+{
+  "headers": {
+    "Name (First Last)": "full_name",
+    "Email address": "contact_email",
+    "Blood grp": "blood_type",
+    "Shirt": "tshirt_size",
+    "When can you come?": "availability",
+    "State of residence": "home_state",
+    "How did you hear about us?": "referral_source",
+    "Timestamp": null,
+    "Comments": null,
+    "Emergency contact phone": null
+  },
+  "values": {
+    "blood_type": {
+      "A positive": "A+",
+      "O neg": "O-",
+      "AB pos": "AB+",
+      "B negative": "B-",
+      "0+": "O+",
+      "a-": "A-",
+      "don't know": null,
+      "Rh+": null,
+      "type A": null
+    },
+    "tshirt_size": {
+      "Medium": "M",
+      "lg": "L",
+      "XL": "XL",
+      "sm": "S",
+      "XXL": null,
+      "kids M": null
+    },
+    "availability": {
+      "Sat/Sun": "weekend",
+      "weekday mornings": "weekday_morning",
+      "after work weekdays": "weekday_evening",
+      "anytime": "any",
+      "Tuesdays 9am": "weekday_morning",
+      "only holidays": null,
+      "call me": null
+    },
+    "home_state": {
+      "NY State": "NY",
+      "N.J.": "NJ",
+      "Conn.": "CT",
+      "Pennsylvania": "PA",
+      "Delaware": null,
+      "Massachusetts": null
+    },
+    "referral_source": {
+      "a friend told me": "friend",
+      "Instagram": "social_media",
+      "saw a poster": "flyer",
+      "my company": "employer",
+      "facebook group": "social_media",
+      "coworker": null,
+      "radio ad": null
+    }
+  }
+}

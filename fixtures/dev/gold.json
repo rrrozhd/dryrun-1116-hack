@@ -1,0 +1,57 @@
+{
+  "headers": {
+    "E-mail Addr": "customer_email",
+    "Order Placed": "order_date",
+    "Pmt Status": "payment_status",
+    "Ship via": "shipping_method",
+    "Sz": "size",
+    "Dest. Country": "ship_country",
+    "Internal memo": null,
+    "Gift wrap?": null
+  },
+  "values": {
+    "payment_status": {
+      "PAID": "paid",
+      "Paid in full": "paid",
+      "settled": "paid",
+      "awaiting payment": "unpaid",
+      "not paid": "unpaid",
+      "refund issued": "refunded",
+      "partial refund": "partially_refunded",
+      "disputed - chargeback": "chargeback",
+      "on hold": null,
+      "N/A": null
+    },
+    "shipping_method": {
+      "Std": "standard",
+      "standard ground": "standard",
+      "Express 2-day": "express",
+      "next day air": "overnight",
+      "pick up in store": "store_pickup",
+      "BOPIS": "store_pickup",
+      "drone": null,
+      "TBD": null
+    },
+    "size": {
+      "small": "S",
+      "Med": "M",
+      "large": "L",
+      "X-Large": "XL",
+      "2XL": "XXL",
+      "extra small": "XS",
+      "one size": null,
+      "32": null
+    },
+    "ship_country": {
+      "USA": "US",
+      "United States": "US",
+      "Canada": "CA",
+      "México": "MX",
+      "UK": "GB",
+      "Deutschland": "DE",
+      "France": "FR",
+      "Holland": null,
+      "EU": null
+    }
+  }
+}
