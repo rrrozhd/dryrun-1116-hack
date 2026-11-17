@@ -1,0 +1,57 @@
+{
+  "fields": {
+    "customer_email": {
+      "type": "string",
+      "description": "customer's email address"
+    },
+    "order_date": {
+      "type": "string",
+      "description": "date the order was placed"
+    },
+    "payment_status": {
+      "type": "enum",
+      "description": "payment state of the order",
+      "values": [
+        "paid",
+        "unpaid",
+        "refunded",
+        "partially_refunded",
+        "chargeback"
+      ]
+    },
+    "shipping_method": {
+      "type": "enum",
+      "description": "how the order ships",
+      "values": [
+        "standard",
+        "express",
+        "overnight",
+        "store_pickup"
+      ]
+    },
+    "size": {
+      "type": "enum",
+      "description": "garment size",
+      "values": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    "ship_country": {
+      "type": "enum",
+      "description": "destination country (ISO 3166 alpha-2)",
+      "values": [
+        "US",
+        "CA",
+        "MX",
+        "GB",
+        "DE",
+        "FR"
+      ]
+    }
+  }
+}
