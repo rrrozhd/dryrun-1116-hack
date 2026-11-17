@@ -1,0 +1,31 @@
+E-mail Addr,Order Placed,payment_status,Ship via,size,ship_country,Internal memo,Gift wrap?
+buyer1@example.com,2025-03-01,paid,Std,small,US,,yes
+buyer2@example.com,03/02/2025,Paid in full,standard ground,Med,United States,vip,no
+buyer3@example.com,2 Mar 2025,settled,Express 2-day,large,Canada,check address,
+buyer4@example.com,2025-03-04,awaiting payment,next day air,X-Large,MX,,Y
+buyer5@example.com,2025-03-01,unpaid,pick up in store,XL,UK,,yes
+buyer6@example.com,03/02/2025,refunded,BOPIS,extra small,Deutschland,vip,no
+buyer1@example.com,2 Mar 2025,partially_refunded,drone,one size,France,check address,
+buyer2@example.com,2025-03-04,chargeback,TBD,32,Holland,,Y
+buyer3@example.com,2025-03-01,on hold,Std,small,EU,,yes
+buyer4@example.com,03/02/2025,N/A,standard ground,Med,US,vip,no
+buyer5@example.com,2 Mar 2025,paid,Express 2-day,large,United States,check address,
+buyer6@example.com,2025-03-04,Paid in full,next day air,X-Large,Canada,,Y
+buyer1@example.com,2025-03-01,settled,pick up in store,XL,MX,,yes
+buyer2@example.com,03/02/2025,awaiting payment,BOPIS,extra small,UK,vip,no
+buyer3@example.com,2 Mar 2025,unpaid,drone,one size,Deutschland,check address,
+buyer4@example.com,2025-03-04,refunded,TBD,32,France,,Y
+buyer5@example.com,2025-03-01,partially_refunded,Std,small,Holland,,yes
+buyer6@example.com,03/02/2025,chargeback,standard ground,Med,EU,vip,no
+buyer1@example.com,2 Mar 2025,on hold,Express 2-day,large,US,check address,
+buyer2@example.com,2025-03-04,N/A,next day air,X-Large,United States,,Y
+buyer3@example.com,2025-03-01,paid,pick up in store,XL,Canada,,yes
+buyer4@example.com,03/02/2025,Paid in full,BOPIS,extra small,MX,vip,no
+buyer5@example.com,2 Mar 2025,settled,drone,one size,UK,check address,
+buyer6@example.com,2025-03-04,awaiting payment,TBD,32,Deutschland,,Y
+buyer1@example.com,2025-03-01,unpaid,Std,small,France,,yes
+buyer2@example.com,03/02/2025,refunded,standard ground,Med,Holland,vip,no
+buyer3@example.com,2 Mar 2025,partially_refunded,Express 2-day,large,EU,check address,
+buyer4@example.com,2025-03-04,chargeback,next day air,X-Large,US,,Y
+buyer5@example.com,2025-03-01,on hold,pick up in store,XL,United States,,yes
+buyer6@example.com,03/02/2025,N/A,BOPIS,extra small,Canada,vip,no

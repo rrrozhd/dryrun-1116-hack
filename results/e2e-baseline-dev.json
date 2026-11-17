@@ -1,0 +1,745 @@
+{
+  "decider": "baseline",
+  "fixture": "dev",
+  "scope": "end-to-end: CLI path, header-first, per cell",
+  "input_sha256": "752ae6c134da874d24b0935e2473296b64753800fe16fead835c99f2096b56aa",
+  "header": {
+    "correct_change": 3,
+    "wrong_change": 0,
+    "correct_abstain": 2,
+    "unchanged_correct": 0,
+    "missed": 3,
+    "needs_edit": 6,
+    "change_precision": 1.0,
+    "coverage": 0.5
+  },
+  "cell": {
+    "correct_change": 19,
+    "wrong_change": 4,
+    "correct_abstain": 24,
+    "unchanged_correct": 120,
+    "missed": 73,
+    "needs_edit": 96,
+    "change_precision": 0.826,
+    "coverage": 0.198
+  },
+  "errors": [
+    {
+      "kind": "header",
+      "column": 0,
+      "raw": "E-mail Addr",
+      "output": "E-mail Addr",
+      "expected": "customer_email",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 1,
+      "raw": "Order Placed",
+      "output": "Order Placed",
+      "expected": "order_date",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 2,
+      "raw": "Paid in full",
+      "output": "Paid in full",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 3,
+      "raw": "settled",
+      "output": "settled",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 4,
+      "raw": "awaiting payment",
+      "output": "awaiting payment",
+      "expected": "unpaid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 12,
+      "raw": "Paid in full",
+      "output": "Paid in full",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 13,
+      "raw": "settled",
+      "output": "settled",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 14,
+      "raw": "awaiting payment",
+      "output": "awaiting payment",
+      "expected": "unpaid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 22,
+      "raw": "Paid in full",
+      "output": "Paid in full",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 23,
+      "raw": "settled",
+      "output": "settled",
+      "expected": "paid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 2,
+      "record": 24,
+      "raw": "awaiting payment",
+      "output": "awaiting payment",
+      "expected": "unpaid",
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "column": 3,
+      "raw": "Ship via",
+      "output": "Ship via",
+      "expected": "shipping_method",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 1,
+      "raw": "Std",
+      "output": "Std",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 2,
+      "raw": "standard ground",
+      "output": "standard ground",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 3,
+      "raw": "Express 2-day",
+      "output": "Express 2-day",
+      "expected": "express",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 4,
+      "raw": "next day air",
+      "output": "next day air",
+      "expected": "overnight",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 5,
+      "raw": "pick up in store",
+      "output": "pick up in store",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 6,
+      "raw": "BOPIS",
+      "output": "BOPIS",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 9,
+      "raw": "Std",
+      "output": "Std",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 10,
+      "raw": "standard ground",
+      "output": "standard ground",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 11,
+      "raw": "Express 2-day",
+      "output": "Express 2-day",
+      "expected": "express",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 12,
+      "raw": "next day air",
+      "output": "next day air",
+      "expected": "overnight",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 13,
+      "raw": "pick up in store",
+      "output": "pick up in store",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 14,
+      "raw": "BOPIS",
+      "output": "BOPIS",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 17,
+      "raw": "Std",
+      "output": "Std",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 18,
+      "raw": "standard ground",
+      "output": "standard ground",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 19,
+      "raw": "Express 2-day",
+      "output": "Express 2-day",
+      "expected": "express",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 20,
+      "raw": "next day air",
+      "output": "next day air",
+      "expected": "overnight",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 21,
+      "raw": "pick up in store",
+      "output": "pick up in store",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 22,
+      "raw": "BOPIS",
+      "output": "BOPIS",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 25,
+      "raw": "Std",
+      "output": "Std",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 26,
+      "raw": "standard ground",
+      "output": "standard ground",
+      "expected": "standard",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 27,
+      "raw": "Express 2-day",
+      "output": "Express 2-day",
+      "expected": "express",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 28,
+      "raw": "next day air",
+      "output": "next day air",
+      "expected": "overnight",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 29,
+      "raw": "pick up in store",
+      "output": "pick up in store",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 3,
+      "record": 30,
+      "raw": "BOPIS",
+      "output": "BOPIS",
+      "expected": "store_pickup",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 1,
+      "raw": "small",
+      "output": "small",
+      "expected": "S",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 2,
+      "raw": "Med",
+      "output": "Med",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 3,
+      "raw": "large",
+      "output": "large",
+      "expected": "L",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 4,
+      "raw": "X-Large",
+      "output": "X-Large",
+      "expected": "XL",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 5,
+      "raw": "2XL",
+      "output": "XL",
+      "expected": "XXL",
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 6,
+      "raw": "extra small",
+      "output": "extra small",
+      "expected": "XS",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 9,
+      "raw": "small",
+      "output": "small",
+      "expected": "S",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 10,
+      "raw": "Med",
+      "output": "Med",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 11,
+      "raw": "large",
+      "output": "large",
+      "expected": "L",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 12,
+      "raw": "X-Large",
+      "output": "X-Large",
+      "expected": "XL",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 13,
+      "raw": "2XL",
+      "output": "XL",
+      "expected": "XXL",
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 14,
+      "raw": "extra small",
+      "output": "extra small",
+      "expected": "XS",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 17,
+      "raw": "small",
+      "output": "small",
+      "expected": "S",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 18,
+      "raw": "Med",
+      "output": "Med",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 19,
+      "raw": "large",
+      "output": "large",
+      "expected": "L",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 20,
+      "raw": "X-Large",
+      "output": "X-Large",
+      "expected": "XL",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 21,
+      "raw": "2XL",
+      "output": "XL",
+      "expected": "XXL",
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 22,
+      "raw": "extra small",
+      "output": "extra small",
+      "expected": "XS",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 25,
+      "raw": "small",
+      "output": "small",
+      "expected": "S",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 26,
+      "raw": "Med",
+      "output": "Med",
+      "expected": "M",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 27,
+      "raw": "large",
+      "output": "large",
+      "expected": "L",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 28,
+      "raw": "X-Large",
+      "output": "X-Large",
+      "expected": "XL",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 29,
+      "raw": "2XL",
+      "output": "XL",
+      "expected": "XXL",
+      "outcome": "wrong_change"
+    },
+    {
+      "kind": "cell",
+      "column": 4,
+      "record": 30,
+      "raw": "extra small",
+      "output": "extra small",
+      "expected": "XS",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 2,
+      "raw": "United States",
+      "output": "United States",
+      "expected": "US",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 3,
+      "raw": "Canada",
+      "output": "Canada",
+      "expected": "CA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 4,
+      "raw": "México",
+      "output": "México",
+      "expected": "MX",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 5,
+      "raw": "UK",
+      "output": "UK",
+      "expected": "GB",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 6,
+      "raw": "Deutschland",
+      "output": "Deutschland",
+      "expected": "DE",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 7,
+      "raw": "France",
+      "output": "France",
+      "expected": "FR",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 11,
+      "raw": "United States",
+      "output": "United States",
+      "expected": "US",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 12,
+      "raw": "Canada",
+      "output": "Canada",
+      "expected": "CA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 13,
+      "raw": "México",
+      "output": "México",
+      "expected": "MX",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 14,
+      "raw": "UK",
+      "output": "UK",
+      "expected": "GB",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 15,
+      "raw": "Deutschland",
+      "output": "Deutschland",
+      "expected": "DE",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 16,
+      "raw": "France",
+      "output": "France",
+      "expected": "FR",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 20,
+      "raw": "United States",
+      "output": "United States",
+      "expected": "US",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 21,
+      "raw": "Canada",
+      "output": "Canada",
+      "expected": "CA",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 22,
+      "raw": "México",
+      "output": "México",
+      "expected": "MX",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 23,
+      "raw": "UK",
+      "output": "UK",
+      "expected": "GB",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 24,
+      "raw": "Deutschland",
+      "output": "Deutschland",
+      "expected": "DE",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 25,
+      "raw": "France",
+      "output": "France",
+      "expected": "FR",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 29,
+      "raw": "United States",
+      "output": "United States",
+      "expected": "US",
+      "outcome": "missed"
+    },
+    {
+      "kind": "cell",
+      "column": 5,
+      "record": 30,
+      "raw": "Canada",
+      "output": "Canada",
+      "expected": "CA",
+      "outcome": "missed"
+    }
+  ]
+}

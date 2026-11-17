@@ -1,0 +1,16 @@
+$ uvx pyright --outputjson --pythonpath /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/data-rescue-core-check-a8ez1lcf/repo/.venv/bin/python
+{
+    "version": "1.1.414",
+    "time": "1794893007187",
+    "generalDiagnostics": [],
+    "summary": {
+        "filesAnalyzed": 3,
+        "errorCount": 0,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 0.748
+    }
+}
+
+
+exit_code=0

@@ -1,0 +1,420 @@
+{
+  "decider": "model-only (diagnostic, no difflib)",
+  "fixture": "heldout",
+  "total": 45,
+  "correct_change": 2,
+  "wrong_change": 0,
+  "correct_abstain": 14,
+  "unchanged_correct": 1,
+  "missed": 28,
+  "accuracy": 0.378,
+  "change_precision": 1.0,
+  "coverage": 0.067,
+  "items": [
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Name (First Last)",
+      "expected": "full_name",
+      "predicted": null,
+      "score": 0.2878,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Email address",
+      "expected": "contact_email",
+      "predicted": null,
+      "score": 0.3371,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Blood grp",
+      "expected": "blood_type",
+      "predicted": null,
+      "score": 0.217,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Shirt",
+      "expected": "tshirt_size",
+      "predicted": null,
+      "score": 0.1655,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "When can you come?",
+      "expected": "availability",
+      "predicted": null,
+      "score": 0.1898,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "State of residence",
+      "expected": "home_state",
+      "predicted": null,
+      "score": 0.1772,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "How did you hear about us?",
+      "expected": "referral_source",
+      "predicted": null,
+      "score": 0.179,
+      "outcome": "missed"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Timestamp",
+      "expected": null,
+      "predicted": null,
+      "score": 0.0203,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Comments",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1388,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "header",
+      "field": null,
+      "raw": "Emergency contact phone",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2373,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "A positive",
+      "expected": "A+",
+      "predicted": null,
+      "score": 0.1577,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "O neg",
+      "expected": "O-",
+      "predicted": null,
+      "score": 0.1592,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "AB pos",
+      "expected": "AB+",
+      "predicted": null,
+      "score": 0.1639,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "B negative",
+      "expected": "B-",
+      "predicted": null,
+      "score": 0.1487,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "0+",
+      "expected": "O+",
+      "predicted": null,
+      "score": 0.168,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "a-",
+      "expected": "A-",
+      "predicted": null,
+      "score": 0.1622,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "don't know",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1196,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "Rh+",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1766,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "blood_type",
+      "raw": "type A",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1778,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "Medium",
+      "expected": "M",
+      "predicted": null,
+      "score": 0.3206,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "lg",
+      "expected": "L",
+      "predicted": null,
+      "score": 0.2771,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "XL",
+      "expected": "XL",
+      "predicted": null,
+      "score": 0.2611,
+      "outcome": "unchanged_correct"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "sm",
+      "expected": "S",
+      "predicted": null,
+      "score": 0.2968,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "XXL",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2913,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "tshirt_size",
+      "raw": "kids M",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1755,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "Sat/Sun",
+      "expected": "weekend",
+      "predicted": null,
+      "score": 0.2121,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "weekday mornings",
+      "expected": "weekday_morning",
+      "predicted": null,
+      "score": 0.1799,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "after work weekdays",
+      "expected": "weekday_evening",
+      "predicted": null,
+      "score": 0.1617,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "anytime",
+      "expected": "any",
+      "predicted": "any",
+      "score": 0.3822,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "Tuesdays 9am",
+      "expected": "weekday_morning",
+      "predicted": null,
+      "score": 0.2242,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "only holidays",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1378,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "availability",
+      "raw": "call me",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1232,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "NY State",
+      "expected": "NY",
+      "predicted": null,
+      "score": 0.135,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "N.J.",
+      "expected": "NJ",
+      "predicted": null,
+      "score": 0.2657,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "Conn.",
+      "expected": "CT",
+      "predicted": null,
+      "score": 0.2234,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "Pennsylvania",
+      "expected": "PA",
+      "predicted": null,
+      "score": 0.3826,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "Delaware",
+      "expected": null,
+      "predicted": null,
+      "score": 0.1453,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "home_state",
+      "raw": "Massachusetts",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2408,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "a friend told me",
+      "expected": "friend",
+      "predicted": null,
+      "score": 0.324,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "Instagram",
+      "expected": "social_media",
+      "predicted": "social_media",
+      "score": 0.4484,
+      "outcome": "correct_change"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "saw a poster",
+      "expected": "flyer",
+      "predicted": null,
+      "score": 0.2881,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "my company",
+      "expected": "employer",
+      "predicted": null,
+      "score": 0.1829,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "facebook group",
+      "expected": "social_media",
+      "predicted": null,
+      "score": 0.2607,
+      "outcome": "missed"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "coworker",
+      "expected": null,
+      "predicted": null,
+      "score": 0.173,
+      "outcome": "correct_abstain"
+    },
+    {
+      "kind": "value",
+      "field": "referral_source",
+      "raw": "radio ad",
+      "expected": null,
+      "predicted": null,
+      "score": 0.2236,
+      "outcome": "correct_abstain"
+    }
+  ]
+}
