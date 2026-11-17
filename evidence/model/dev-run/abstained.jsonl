@@ -1,0 +1,219 @@
+{"kind": "header", "row": null, "column": 0, "before": "E-mail Addr", "after": "E-mail Addr", "decided_by": "model", "score": 0.1923, "reason": "abstain: best 'customer_email' 0.19, none/unsure 0.46"}
+{"kind": "header", "row": null, "column": 1, "before": "Order Placed", "after": "Order Placed", "decided_by": "model", "score": 0.2084, "reason": "abstain: best 'order_date' 0.21, none/unsure 0.29"}
+{"kind": "header", "row": null, "column": 3, "before": "Ship via", "after": "Ship via", "decided_by": "model", "score": 0.2033, "reason": "abstain: best 'order_date' 0.20, none/unsure 0.19"}
+{"kind": "header", "row": null, "column": 6, "before": "Internal memo", "after": "Internal memo", "decided_by": "model", "score": 0.08, "reason": "abstain: best 'customer_email' 0.08, none/unsure 0.80"}
+{"kind": "header", "row": null, "column": 7, "before": "Gift wrap?", "after": "Gift wrap?", "decided_by": "model", "score": 0.1575, "reason": "abstain: best 'customer_email' 0.16, none/unsure 0.48"}
+{"kind": "cell", "row": 1, "column": 0, "before": "buyer1@example.com", "after": "buyer1@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 0, "before": "buyer2@example.com", "after": "buyer2@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 3, "column": 0, "before": "buyer3@example.com", "after": "buyer3@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 4, "column": 0, "before": "buyer4@example.com", "after": "buyer4@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 5, "column": 0, "before": "buyer5@example.com", "after": "buyer5@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 6, "column": 0, "before": "buyer6@example.com", "after": "buyer6@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 7, "column": 0, "before": "buyer1@example.com", "after": "buyer1@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 8, "column": 0, "before": "buyer2@example.com", "after": "buyer2@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 9, "column": 0, "before": "buyer3@example.com", "after": "buyer3@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 10, "column": 0, "before": "buyer4@example.com", "after": "buyer4@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 11, "column": 0, "before": "buyer5@example.com", "after": "buyer5@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 12, "column": 0, "before": "buyer6@example.com", "after": "buyer6@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 13, "column": 0, "before": "buyer1@example.com", "after": "buyer1@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 14, "column": 0, "before": "buyer2@example.com", "after": "buyer2@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 15, "column": 0, "before": "buyer3@example.com", "after": "buyer3@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 16, "column": 0, "before": "buyer4@example.com", "after": "buyer4@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 17, "column": 0, "before": "buyer5@example.com", "after": "buyer5@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 18, "column": 0, "before": "buyer6@example.com", "after": "buyer6@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 19, "column": 0, "before": "buyer1@example.com", "after": "buyer1@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 20, "column": 0, "before": "buyer2@example.com", "after": "buyer2@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 21, "column": 0, "before": "buyer3@example.com", "after": "buyer3@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 22, "column": 0, "before": "buyer4@example.com", "after": "buyer4@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 23, "column": 0, "before": "buyer5@example.com", "after": "buyer5@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 24, "column": 0, "before": "buyer6@example.com", "after": "buyer6@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 25, "column": 0, "before": "buyer1@example.com", "after": "buyer1@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 26, "column": 0, "before": "buyer2@example.com", "after": "buyer2@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 27, "column": 0, "before": "buyer3@example.com", "after": "buyer3@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 28, "column": 0, "before": "buyer4@example.com", "after": "buyer4@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 29, "column": 0, "before": "buyer5@example.com", "after": "buyer5@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 30, "column": 0, "before": "buyer6@example.com", "after": "buyer6@example.com", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 1, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 3, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 4, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 5, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 6, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 7, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 8, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 9, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 10, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 11, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 12, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 13, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 14, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 15, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 16, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 17, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 18, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 19, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 20, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 21, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 22, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 23, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 24, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 25, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 26, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 27, "column": 1, "before": "2 Mar 2025", "after": "2 Mar 2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 28, "column": 1, "before": "2025-03-04", "after": "2025-03-04", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 29, "column": 1, "before": "2025-03-01", "after": "2025-03-01", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 30, "column": 1, "before": "03/02/2025", "after": "03/02/2025", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 2, "before": "Paid in full", "after": "Paid in full", "decided_by": "model", "score": 0.2778, "reason": "abstain: best 'paid' 0.28, none/unsure 0.20"}
+{"kind": "cell", "row": 3, "column": 2, "before": "settled", "after": "settled", "decided_by": "model", "score": 0.2458, "reason": "abstain: best 'refunded' 0.25, none/unsure 0.16"}
+{"kind": "cell", "row": 4, "column": 2, "before": "awaiting payment", "after": "awaiting payment", "decided_by": "model", "score": 0.2445, "reason": "abstain: best 'paid' 0.24, none/unsure 0.26"}
+{"kind": "cell", "row": 9, "column": 2, "before": "on hold", "after": "on hold", "decided_by": "model", "score": 0.1862, "reason": "abstain: best 'paid' 0.19, none/unsure 0.33"}
+{"kind": "cell", "row": 10, "column": 2, "before": "N/A", "after": "N/A", "decided_by": "model", "score": 0.1246, "reason": "abstain: best 'chargeback' 0.12, none/unsure 0.67"}
+{"kind": "cell", "row": 12, "column": 2, "before": "Paid in full", "after": "Paid in full", "decided_by": "model", "score": 0.2778, "reason": "abstain: best 'paid' 0.28, none/unsure 0.20"}
+{"kind": "cell", "row": 13, "column": 2, "before": "settled", "after": "settled", "decided_by": "model", "score": 0.2458, "reason": "abstain: best 'refunded' 0.25, none/unsure 0.16"}
+{"kind": "cell", "row": 14, "column": 2, "before": "awaiting payment", "after": "awaiting payment", "decided_by": "model", "score": 0.2445, "reason": "abstain: best 'paid' 0.24, none/unsure 0.26"}
+{"kind": "cell", "row": 19, "column": 2, "before": "on hold", "after": "on hold", "decided_by": "model", "score": 0.1862, "reason": "abstain: best 'paid' 0.19, none/unsure 0.33"}
+{"kind": "cell", "row": 20, "column": 2, "before": "N/A", "after": "N/A", "decided_by": "model", "score": 0.1246, "reason": "abstain: best 'chargeback' 0.12, none/unsure 0.67"}
+{"kind": "cell", "row": 22, "column": 2, "before": "Paid in full", "after": "Paid in full", "decided_by": "model", "score": 0.2778, "reason": "abstain: best 'paid' 0.28, none/unsure 0.20"}
+{"kind": "cell", "row": 23, "column": 2, "before": "settled", "after": "settled", "decided_by": "model", "score": 0.2458, "reason": "abstain: best 'refunded' 0.25, none/unsure 0.16"}
+{"kind": "cell", "row": 24, "column": 2, "before": "awaiting payment", "after": "awaiting payment", "decided_by": "model", "score": 0.2445, "reason": "abstain: best 'paid' 0.24, none/unsure 0.26"}
+{"kind": "cell", "row": 29, "column": 2, "before": "on hold", "after": "on hold", "decided_by": "model", "score": 0.1862, "reason": "abstain: best 'paid' 0.19, none/unsure 0.33"}
+{"kind": "cell", "row": 30, "column": 2, "before": "N/A", "after": "N/A", "decided_by": "model", "score": 0.1246, "reason": "abstain: best 'chargeback' 0.12, none/unsure 0.67"}
+{"kind": "cell", "row": 1, "column": 3, "before": "Std", "after": "Std", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 3, "before": "standard ground", "after": "standard ground", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 3, "column": 3, "before": "Express 2-day", "after": "Express 2-day", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 4, "column": 3, "before": "next day air", "after": "next day air", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 5, "column": 3, "before": "pick up in store", "after": "pick up in store", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 6, "column": 3, "before": "BOPIS", "after": "BOPIS", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 7, "column": 3, "before": "drone", "after": "drone", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 8, "column": 3, "before": "TBD", "after": "TBD", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 9, "column": 3, "before": "Std", "after": "Std", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 10, "column": 3, "before": "standard ground", "after": "standard ground", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 11, "column": 3, "before": "Express 2-day", "after": "Express 2-day", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 12, "column": 3, "before": "next day air", "after": "next day air", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 13, "column": 3, "before": "pick up in store", "after": "pick up in store", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 14, "column": 3, "before": "BOPIS", "after": "BOPIS", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 15, "column": 3, "before": "drone", "after": "drone", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 16, "column": 3, "before": "TBD", "after": "TBD", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 17, "column": 3, "before": "Std", "after": "Std", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 18, "column": 3, "before": "standard ground", "after": "standard ground", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 19, "column": 3, "before": "Express 2-day", "after": "Express 2-day", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 20, "column": 3, "before": "next day air", "after": "next day air", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 21, "column": 3, "before": "pick up in store", "after": "pick up in store", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 22, "column": 3, "before": "BOPIS", "after": "BOPIS", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 23, "column": 3, "before": "drone", "after": "drone", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 24, "column": 3, "before": "TBD", "after": "TBD", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 25, "column": 3, "before": "Std", "after": "Std", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 26, "column": 3, "before": "standard ground", "after": "standard ground", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 27, "column": 3, "before": "Express 2-day", "after": "Express 2-day", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 28, "column": 3, "before": "next day air", "after": "next day air", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 29, "column": 3, "before": "pick up in store", "after": "pick up in store", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 30, "column": 3, "before": "BOPIS", "after": "BOPIS", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 1, "column": 4, "before": "small", "after": "small", "decided_by": "model", "score": 0.3105, "reason": "abstain: best 'S' 0.31, none/unsure 0.06"}
+{"kind": "cell", "row": 2, "column": 4, "before": "Med", "after": "Med", "decided_by": "model", "score": 0.2929, "reason": "abstain: best 'S' 0.29, none/unsure 0.06"}
+{"kind": "cell", "row": 3, "column": 4, "before": "large", "after": "large", "decided_by": "model", "score": 0.2096, "reason": "abstain: best 'S' 0.21, none/unsure 0.06"}
+{"kind": "cell", "row": 4, "column": 4, "before": "X-Large", "after": "X-Large", "decided_by": "model", "score": 0.2157, "reason": "abstain: best 'L' 0.22, none/unsure 0.04"}
+{"kind": "cell", "row": 6, "column": 4, "before": "extra small", "after": "extra small", "decided_by": "model", "score": 0.2553, "reason": "abstain: best 'S' 0.26, none/unsure 0.09"}
+{"kind": "cell", "row": 7, "column": 4, "before": "one size", "after": "one size", "decided_by": "model", "score": 0.2468, "reason": "abstain: best 'XS' 0.25, none/unsure 0.24"}
+{"kind": "cell", "row": 8, "column": 4, "before": "32", "after": "32", "decided_by": "model", "score": 0.2088, "reason": "abstain: best 'S' 0.21, none/unsure 0.09"}
+{"kind": "cell", "row": 9, "column": 4, "before": "small", "after": "small", "decided_by": "model", "score": 0.3105, "reason": "abstain: best 'S' 0.31, none/unsure 0.06"}
+{"kind": "cell", "row": 10, "column": 4, "before": "Med", "after": "Med", "decided_by": "model", "score": 0.2929, "reason": "abstain: best 'S' 0.29, none/unsure 0.06"}
+{"kind": "cell", "row": 11, "column": 4, "before": "large", "after": "large", "decided_by": "model", "score": 0.2096, "reason": "abstain: best 'S' 0.21, none/unsure 0.06"}
+{"kind": "cell", "row": 12, "column": 4, "before": "X-Large", "after": "X-Large", "decided_by": "model", "score": 0.2157, "reason": "abstain: best 'L' 0.22, none/unsure 0.04"}
+{"kind": "cell", "row": 14, "column": 4, "before": "extra small", "after": "extra small", "decided_by": "model", "score": 0.2553, "reason": "abstain: best 'S' 0.26, none/unsure 0.09"}
+{"kind": "cell", "row": 15, "column": 4, "before": "one size", "after": "one size", "decided_by": "model", "score": 0.2468, "reason": "abstain: best 'XS' 0.25, none/unsure 0.24"}
+{"kind": "cell", "row": 16, "column": 4, "before": "32", "after": "32", "decided_by": "model", "score": 0.2088, "reason": "abstain: best 'S' 0.21, none/unsure 0.09"}
+{"kind": "cell", "row": 17, "column": 4, "before": "small", "after": "small", "decided_by": "model", "score": 0.3105, "reason": "abstain: best 'S' 0.31, none/unsure 0.06"}
+{"kind": "cell", "row": 18, "column": 4, "before": "Med", "after": "Med", "decided_by": "model", "score": 0.2929, "reason": "abstain: best 'S' 0.29, none/unsure 0.06"}
+{"kind": "cell", "row": 19, "column": 4, "before": "large", "after": "large", "decided_by": "model", "score": 0.2096, "reason": "abstain: best 'S' 0.21, none/unsure 0.06"}
+{"kind": "cell", "row": 20, "column": 4, "before": "X-Large", "after": "X-Large", "decided_by": "model", "score": 0.2157, "reason": "abstain: best 'L' 0.22, none/unsure 0.04"}
+{"kind": "cell", "row": 22, "column": 4, "before": "extra small", "after": "extra small", "decided_by": "model", "score": 0.2553, "reason": "abstain: best 'S' 0.26, none/unsure 0.09"}
+{"kind": "cell", "row": 23, "column": 4, "before": "one size", "after": "one size", "decided_by": "model", "score": 0.2468, "reason": "abstain: best 'XS' 0.25, none/unsure 0.24"}
+{"kind": "cell", "row": 24, "column": 4, "before": "32", "after": "32", "decided_by": "model", "score": 0.2088, "reason": "abstain: best 'S' 0.21, none/unsure 0.09"}
+{"kind": "cell", "row": 25, "column": 4, "before": "small", "after": "small", "decided_by": "model", "score": 0.3105, "reason": "abstain: best 'S' 0.31, none/unsure 0.06"}
+{"kind": "cell", "row": 26, "column": 4, "before": "Med", "after": "Med", "decided_by": "model", "score": 0.2929, "reason": "abstain: best 'S' 0.29, none/unsure 0.06"}
+{"kind": "cell", "row": 27, "column": 4, "before": "large", "after": "large", "decided_by": "model", "score": 0.2096, "reason": "abstain: best 'S' 0.21, none/unsure 0.06"}
+{"kind": "cell", "row": 28, "column": 4, "before": "X-Large", "after": "X-Large", "decided_by": "model", "score": 0.2157, "reason": "abstain: best 'L' 0.22, none/unsure 0.04"}
+{"kind": "cell", "row": 30, "column": 4, "before": "extra small", "after": "extra small", "decided_by": "model", "score": 0.2553, "reason": "abstain: best 'S' 0.26, none/unsure 0.09"}
+{"kind": "cell", "row": 2, "column": 5, "before": "United States", "after": "United States", "decided_by": "model", "score": 0.1769, "reason": "abstain: best 'FR' 0.18, none/unsure 0.56"}
+{"kind": "cell", "row": 3, "column": 5, "before": "Canada", "after": "Canada", "decided_by": "model", "score": 0.272, "reason": "abstain: best 'CA' 0.27, none/unsure 0.25"}
+{"kind": "cell", "row": 5, "column": 5, "before": "UK", "after": "UK", "decided_by": "model", "score": 0.1893, "reason": "abstain: best 'FR' 0.19, none/unsure 0.56"}
+{"kind": "cell", "row": 6, "column": 5, "before": "Deutschland", "after": "Deutschland", "decided_by": "model", "score": 0.229, "reason": "abstain: best 'FR' 0.23, none/unsure 0.36"}
+{"kind": "cell", "row": 7, "column": 5, "before": "France", "after": "France", "decided_by": "model", "score": 0.1736, "reason": "abstain: best 'US' 0.17, none/unsure 0.58"}
+{"kind": "cell", "row": 8, "column": 5, "before": "Holland", "after": "Holland", "decided_by": "model", "score": 0.1682, "reason": "abstain: best 'FR' 0.17, none/unsure 0.62"}
+{"kind": "cell", "row": 9, "column": 5, "before": "EU", "after": "EU", "decided_by": "model", "score": 0.126, "reason": "abstain: best 'FR' 0.13, none/unsure 0.73"}
+{"kind": "cell", "row": 11, "column": 5, "before": "United States", "after": "United States", "decided_by": "model", "score": 0.1769, "reason": "abstain: best 'FR' 0.18, none/unsure 0.56"}
+{"kind": "cell", "row": 12, "column": 5, "before": "Canada", "after": "Canada", "decided_by": "model", "score": 0.272, "reason": "abstain: best 'CA' 0.27, none/unsure 0.25"}
+{"kind": "cell", "row": 14, "column": 5, "before": "UK", "after": "UK", "decided_by": "model", "score": 0.1893, "reason": "abstain: best 'FR' 0.19, none/unsure 0.56"}
+{"kind": "cell", "row": 15, "column": 5, "before": "Deutschland", "after": "Deutschland", "decided_by": "model", "score": 0.229, "reason": "abstain: best 'FR' 0.23, none/unsure 0.36"}
+{"kind": "cell", "row": 16, "column": 5, "before": "France", "after": "France", "decided_by": "model", "score": 0.1736, "reason": "abstain: best 'US' 0.17, none/unsure 0.58"}
+{"kind": "cell", "row": 17, "column": 5, "before": "Holland", "after": "Holland", "decided_by": "model", "score": 0.1682, "reason": "abstain: best 'FR' 0.17, none/unsure 0.62"}
+{"kind": "cell", "row": 18, "column": 5, "before": "EU", "after": "EU", "decided_by": "model", "score": 0.126, "reason": "abstain: best 'FR' 0.13, none/unsure 0.73"}
+{"kind": "cell", "row": 20, "column": 5, "before": "United States", "after": "United States", "decided_by": "model", "score": 0.1769, "reason": "abstain: best 'FR' 0.18, none/unsure 0.56"}
+{"kind": "cell", "row": 21, "column": 5, "before": "Canada", "after": "Canada", "decided_by": "model", "score": 0.272, "reason": "abstain: best 'CA' 0.27, none/unsure 0.25"}
+{"kind": "cell", "row": 23, "column": 5, "before": "UK", "after": "UK", "decided_by": "model", "score": 0.1893, "reason": "abstain: best 'FR' 0.19, none/unsure 0.56"}
+{"kind": "cell", "row": 24, "column": 5, "before": "Deutschland", "after": "Deutschland", "decided_by": "model", "score": 0.229, "reason": "abstain: best 'FR' 0.23, none/unsure 0.36"}
+{"kind": "cell", "row": 25, "column": 5, "before": "France", "after": "France", "decided_by": "model", "score": 0.1736, "reason": "abstain: best 'US' 0.17, none/unsure 0.58"}
+{"kind": "cell", "row": 26, "column": 5, "before": "Holland", "after": "Holland", "decided_by": "model", "score": 0.1682, "reason": "abstain: best 'FR' 0.17, none/unsure 0.62"}
+{"kind": "cell", "row": 27, "column": 5, "before": "EU", "after": "EU", "decided_by": "model", "score": 0.126, "reason": "abstain: best 'FR' 0.13, none/unsure 0.73"}
+{"kind": "cell", "row": 29, "column": 5, "before": "United States", "after": "United States", "decided_by": "model", "score": 0.1769, "reason": "abstain: best 'FR' 0.18, none/unsure 0.56"}
+{"kind": "cell", "row": 30, "column": 5, "before": "Canada", "after": "Canada", "decided_by": "model", "score": 0.272, "reason": "abstain: best 'CA' 0.27, none/unsure 0.25"}
+{"kind": "cell", "row": 1, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 3, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 4, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 5, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 6, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 7, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 8, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 9, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 10, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 11, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 12, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 13, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 14, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 15, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 16, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 17, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 18, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 19, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 20, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 21, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 22, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 23, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 24, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 25, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 26, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 27, "column": 6, "before": "check address", "after": "check address", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 28, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 29, "column": 6, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 30, "column": 6, "before": "vip", "after": "vip", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 1, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 2, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 3, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 4, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 5, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 6, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 7, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 8, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 9, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 10, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 11, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 12, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 13, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 14, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 15, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 16, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 17, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 18, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 19, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 20, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 21, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 22, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 23, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 24, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 25, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 26, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 27, "column": 7, "before": "", "after": "", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 28, "column": 7, "before": "Y", "after": "Y", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 29, "column": 7, "before": "yes", "after": "yes", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
+{"kind": "cell", "row": 30, "column": 7, "before": "no", "after": "no", "decided_by": "rule", "score": 0.0, "reason": "Unresolved header; value preserved"}
