@@ -1,0 +1,93 @@
+=== $ git clone -q --branch hub/ff1ea14b-c112-4f67-96e3-8a14c1137df6 https://github.com/rrrozhd/dryrun-1116-hack.git repo
+--- exit 0
+=== $ git rev-parse HEAD
+ae05ce0dd44fb9a7bad490f2832f98dcdfa652ae
+--- exit 0
+=== $ git cat-file -e 15f93fb2e25142a0aa9b84e584edeeb8c850d17e && git merge-base --is-ancestor 15f93fb HEAD && echo "15f93fb is an ancestor of HEAD"
+15f93fb is an ancestor of HEAD
+--- exit 0
+=== $ git diff --stat 15f93fb HEAD
+ README.md                | 6 ++++--
+ evidence/model/README.md | 6 +++++-
+ 2 files changed, 9 insertions(+), 3 deletions(-)
+--- exit 0
+=== $ git diff --name-only 15f93fb HEAD
+README.md
+evidence/model/README.md
+--- exit 0
+=== $ git diff 15f93fb HEAD
+diff --git a/README.md b/README.md
+index e536a93..4fbdaa1 100644
+--- a/README.md
++++ b/README.md
+@@ -78,8 +78,10 @@ coordinates, output validation and audit guarantees. Start a custom schema from
+ ## Results and reproducibility
+ 
+ The threshold, prompt, model revision and option ordering were pinned on dev at
+-`057f738` before the first held-out run. Replays keep that configuration. Fixtures
+-are synthetic; this small evaluation is not a production accuracy guarantee.
++`057f738` before the first recorded model/cascade held-out evaluation (`644bc5a`).
++Baseline held-out results were recorded earlier, at `faed211`. Replays keep the
++frozen configuration. Fixtures are synthetic; this small evaluation is not a
++production accuracy guarantee.
+ 
+ | Held-out evaluation | Baseline | Cascade (`model`) | Model only |
+ | --- | ---: | ---: | ---: |
+diff --git a/evidence/model/README.md b/evidence/model/README.md
+index 1ec45ae..68023e8 100644
+--- a/evidence/model/README.md
++++ b/evidence/model/README.md
+@@ -3,7 +3,11 @@
+ All numbers below come from committed files in `results/`. These are the author's local
+ runs. The reviewer's fresh-clone replay is separate evidence.
+ 
+-## Frozen configuration (pinned at `057f738` before any held-out run)
++## Frozen configuration
++
++The configuration was pinned at `057f738` before the first recorded model/cascade
++held-out evaluation (`644bc5a`). Baseline held-out results were recorded earlier,
++at `faed211`.
+ 
+ - `--decider model` is a **cascade**: the difflib baseline answers first, and the local model
+   is asked only where difflib abstains. The audit's `decided_by` says which one made each change.
+--- exit 0
+=== $ git diff --quiet 15f93fb HEAD -- . ":(exclude)README.md" ":(exclude)evidence/model/README.md" && echo "all other paths identical"
+all other paths identical
+--- exit 0
+=== $ blocks 15f93fb | shasum -a 256
+ccd4c00203e905dadfd3ea32fd88349ef54b5ef58037e21fbbe602ef7c401275  -
+--- exit 0
+=== $ blocks HEAD | shasum -a 256
+ccd4c00203e905dadfd3ea32fd88349ef54b5ef58037e21fbbe602ef7c401275  -
+--- exit 0
+=== $ diff <(blocks 15f93fb) <(blocks HEAD) && echo "README command blocks identical"
+README command blocks identical
+--- exit 0
+=== $ shasum -a 256 $RUN/eval-baseline.json results/baseline-heldout.json $RUN/eval-model.json results/model-heldout.json $RUN/e2e-baseline.json results/e2e-baseline-heldout.json $RUN/e2e-model.json results/e2e-model-heldout.json
+79f32f79afc73f59282d3b966f2b710b29b9def7a580a4873329ec9c3b913599  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/eval-baseline.json
+79f32f79afc73f59282d3b966f2b710b29b9def7a580a4873329ec9c3b913599  results/baseline-heldout.json
+5a18b1b7b377a3da178a2b8b8a307d76a3657b8417d5e5d5bd1effd5cee18b3e  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/eval-model.json
+5a18b1b7b377a3da178a2b8b8a307d76a3657b8417d5e5d5bd1effd5cee18b3e  results/model-heldout.json
+4180c32f3b2fa6670502a935510f62a3555fd8a574822f191bd83caec36f708d  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/e2e-baseline.json
+4180c32f3b2fa6670502a935510f62a3555fd8a574822f191bd83caec36f708d  results/e2e-baseline-heldout.json
+309326cd6a3c78f8d68e332cefe4a78ffa8969f0a77aa64ed2fded4f81bde08a  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/e2e-model.json
+309326cd6a3c78f8d68e332cefe4a78ffa8969f0a77aa64ed2fded4f81bde08a  results/e2e-model-heldout.json
+--- exit 0
+=== $ for f in cleaned.csv audit.jsonl abstained.jsonl; do shasum -a 256 $RUN/model/$f evidence/model/dev-run/$f; done
+834a791fef59d65df53c3d3716c37d462204fd55a30a9822e80dc9c8d1efb6bc  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/model/cleaned.csv
+834a791fef59d65df53c3d3716c37d462204fd55a30a9822e80dc9c8d1efb6bc  evidence/model/dev-run/cleaned.csv
+7d19540dafd0526f95338c476aa8b06ccc3832a72aa157d355e91fe4a45843d3  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/model/audit.jsonl
+7d19540dafd0526f95338c476aa8b06ccc3832a72aa157d355e91fe4a45843d3  evidence/model/dev-run/audit.jsonl
+65605626ed1ccb76ddfb1b7bf93ed1476e7b5b7ca74c317570770d6681fa8f78  /var/folders/gs/jlz3dmzx2t1515wx3ff7cgl40000gn/T/tmp.0luV0u3Ahf/model/abstained.jsonl
+65605626ed1ccb76ddfb1b7bf93ed1476e7b5b7ca74c317570770d6681fa8f78  evidence/model/dev-run/abstained.jsonl
+--- exit 0
+=== $ cmp $RUN/eval-baseline.json results/baseline-heldout.json && cmp $RUN/eval-model.json results/model-heldout.json && cmp $RUN/e2e-baseline.json results/e2e-baseline-heldout.json && cmp $RUN/e2e-model.json results/e2e-model-heldout.json && for f in cleaned.csv audit.jsonl abstained.jsonl; do cmp $RUN/model/$f evidence/model/dev-run/$f || exit 1; done && echo "all 7 files byte-identical"
+all 7 files byte-identical
+--- exit 0
+=== $ shasum -a 256 fixtures/heldout/gold.json fixtures/heldout/input.csv fixtures/heldout/schema.json
+af7dc8cb488c4343e0d04952289f46f84a64264515909a359b7fadbcb01ccae3  fixtures/heldout/gold.json
+82fc01de5b990a66c8042c71e34655fc5cfacee4fc58fa0dc538c47913e2aea1  fixtures/heldout/input.csv
+cf8911f4f8eacb4980c108d10d2ed2f9dc131731dd641076e73eb351e350e26d  fixtures/heldout/schema.json
+--- exit 0
+=== $ git status --porcelain
+--- exit 0
