@@ -8,6 +8,7 @@
   "missed": 21,
   "accuracy": 0.488,
   "change_precision": 0.917,
+  "coverage": 0.333,
   "items": [
     {
       "kind": "header",
@@ -15,7 +16,7 @@
       "raw": "E-mail Addr",
       "expected": "customer_email",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -24,7 +25,7 @@
       "raw": "Order Placed",
       "expected": "order_date",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -33,7 +34,7 @@
       "raw": "Pmt Status",
       "expected": "payment_status",
       "predicted": "payment_status",
-      "confidence": 0.75,
+      "score": 0.75,
       "outcome": "correct_change"
     },
     {
@@ -42,7 +43,7 @@
       "raw": "Ship via",
       "expected": "shipping_method",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -51,7 +52,7 @@
       "raw": "Sz",
       "expected": "size",
       "predicted": "size",
-      "confidence": 0.667,
+      "score": 0.667,
       "outcome": "correct_change"
     },
     {
@@ -60,7 +61,7 @@
       "raw": "Dest. Country",
       "expected": "ship_country",
       "predicted": "ship_country",
-      "confidence": 0.64,
+      "score": 0.64,
       "outcome": "correct_change"
     },
     {
@@ -69,7 +70,7 @@
       "raw": "Internal memo",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -78,7 +79,7 @@
       "raw": "Gift wrap?",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -87,7 +88,7 @@
       "raw": "PAID",
       "expected": "paid",
       "predicted": "paid",
-      "confidence": 1.0,
+      "score": 1.0,
       "outcome": "correct_change"
     },
     {
@@ -96,7 +97,7 @@
       "raw": "Paid in full",
       "expected": "paid",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -105,7 +106,7 @@
       "raw": "settled",
       "expected": "paid",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -114,7 +115,7 @@
       "raw": "awaiting payment",
       "expected": "unpaid",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -123,7 +124,7 @@
       "raw": "not paid",
       "expected": "unpaid",
       "predicted": "unpaid",
-      "confidence": 0.714,
+      "score": 0.714,
       "outcome": "correct_change"
     },
     {
@@ -132,7 +133,7 @@
       "raw": "refund issued",
       "expected": "refunded",
       "predicted": "refunded",
-      "confidence": 0.762,
+      "score": 0.762,
       "outcome": "correct_change"
     },
     {
@@ -141,7 +142,7 @@
       "raw": "partial refund",
       "expected": "partially_refunded",
       "predicted": "partially_refunded",
-      "confidence": 0.812,
+      "score": 0.812,
       "outcome": "correct_change"
     },
     {
@@ -150,7 +151,7 @@
       "raw": "disputed - chargeback",
       "expected": "chargeback",
       "predicted": "chargeback",
-      "confidence": 0.645,
+      "score": 0.645,
       "outcome": "correct_change"
     },
     {
@@ -159,7 +160,7 @@
       "raw": "on hold",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -168,7 +169,7 @@
       "raw": "N/A",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -177,7 +178,7 @@
       "raw": "Std",
       "expected": "standard",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -186,7 +187,7 @@
       "raw": "standard ground",
       "expected": "standard",
       "predicted": "standard",
-      "confidence": 0.696,
+      "score": 0.696,
       "outcome": "correct_change"
     },
     {
@@ -195,7 +196,7 @@
       "raw": "Express 2-day",
       "expected": "express",
       "predicted": "express",
-      "confidence": 0.7,
+      "score": 0.7,
       "outcome": "correct_change"
     },
     {
@@ -204,7 +205,7 @@
       "raw": "next day air",
       "expected": "overnight",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -213,7 +214,7 @@
       "raw": "pick up in store",
       "expected": "store_pickup",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -222,7 +223,7 @@
       "raw": "BOPIS",
       "expected": "store_pickup",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -231,7 +232,7 @@
       "raw": "drone",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -240,7 +241,7 @@
       "raw": "TBD",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -249,7 +250,7 @@
       "raw": "small",
       "expected": "S",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -258,7 +259,7 @@
       "raw": "Med",
       "expected": "M",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -267,7 +268,7 @@
       "raw": "large",
       "expected": "L",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -276,7 +277,7 @@
       "raw": "X-Large",
       "expected": "XL",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -285,7 +286,7 @@
       "raw": "2XL",
       "expected": "XXL",
       "predicted": "XL",
-      "confidence": 0.8,
+      "score": 0.8,
       "outcome": "wrong_change"
     },
     {
@@ -294,7 +295,7 @@
       "raw": "extra small",
       "expected": "XS",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -303,7 +304,7 @@
       "raw": "one size",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -312,7 +313,7 @@
       "raw": "32",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -321,7 +322,7 @@
       "raw": "USA",
       "expected": "US",
       "predicted": "US",
-      "confidence": 0.8,
+      "score": 0.8,
       "outcome": "correct_change"
     },
     {
@@ -330,7 +331,7 @@
       "raw": "United States",
       "expected": "US",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -339,7 +340,7 @@
       "raw": "Canada",
       "expected": "CA",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -348,7 +349,7 @@
       "raw": "México",
       "expected": "MX",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -357,7 +358,7 @@
       "raw": "UK",
       "expected": "GB",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -366,7 +367,7 @@
       "raw": "Deutschland",
       "expected": "DE",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -375,7 +376,7 @@
       "raw": "France",
       "expected": "FR",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -384,7 +385,7 @@
       "raw": "Holland",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -393,7 +394,7 @@
       "raw": "EU",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     }
   ]

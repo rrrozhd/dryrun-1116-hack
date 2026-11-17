@@ -10,7 +10,7 @@ GOLD = {"headers": {"Status": "status", "Notes": None},
 
 
 def table(answers):
-    return lambda desc, allowed, raw: {"value": answers[raw], "confidence": 1.0}
+    return lambda desc, allowed, raw: {"value": answers[raw], "score": 1.0}
 
 
 def test_metric_arithmetic_hand_checked():
@@ -19,6 +19,7 @@ def test_metric_arithmetic_hand_checked():
                      "on hold": None, "x": "bogus"}), SCHEMA, GOLD)
     assert (m["total"], m["correct_change"], m["wrong_change"], m["missed"], m["correct_abstain"]) == (6, 2, 1, 1, 2)
     assert m["accuracy"] == round(4 / 6, 3) and m["change_precision"] == round(2 / 3, 3)
+    assert m["coverage"] == round(2 / 3, 3)  # gold targets: Status, PAID, settled
 
 
 def test_baseline_matches_close_spelling_and_abstains_on_unrelated():

@@ -8,6 +8,7 @@
   "missed": 22,
   "accuracy": 0.489,
   "change_precision": 0.9,
+  "coverage": 0.29,
   "items": [
     {
       "kind": "header",
@@ -15,7 +16,7 @@
       "raw": "Name (First Last)",
       "expected": "full_name",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -24,7 +25,7 @@
       "raw": "Email address",
       "expected": "contact_email",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -33,7 +34,7 @@
       "raw": "Blood grp",
       "expected": "blood_type",
       "predicted": "blood_type",
-      "confidence": 0.632,
+      "score": 0.632,
       "outcome": "correct_change"
     },
     {
@@ -42,7 +43,7 @@
       "raw": "Shirt",
       "expected": "tshirt_size",
       "predicted": "tshirt_size",
-      "confidence": 0.625,
+      "score": 0.625,
       "outcome": "correct_change"
     },
     {
@@ -51,7 +52,7 @@
       "raw": "When can you come?",
       "expected": "availability",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -60,7 +61,7 @@
       "raw": "State of residence",
       "expected": "home_state",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -69,7 +70,7 @@
       "raw": "How did you hear about us?",
       "expected": "referral_source",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -78,7 +79,7 @@
       "raw": "Timestamp",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -87,7 +88,7 @@
       "raw": "Comments",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -96,7 +97,7 @@
       "raw": "Emergency contact phone",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -105,7 +106,7 @@
       "raw": "A positive",
       "expected": "A+",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -114,7 +115,7 @@
       "raw": "O neg",
       "expected": "O-",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -123,7 +124,7 @@
       "raw": "AB pos",
       "expected": "AB+",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -132,7 +133,7 @@
       "raw": "B negative",
       "expected": "B-",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -141,7 +142,7 @@
       "raw": "0+",
       "expected": "O+",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -150,7 +151,7 @@
       "raw": "a-",
       "expected": "A-",
       "predicted": "A-",
-      "confidence": 1.0,
+      "score": 1.0,
       "outcome": "correct_change"
     },
     {
@@ -159,7 +160,7 @@
       "raw": "don't know",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -168,7 +169,7 @@
       "raw": "Rh+",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -177,7 +178,7 @@
       "raw": "type A",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -186,7 +187,7 @@
       "raw": "Medium",
       "expected": "M",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -195,7 +196,7 @@
       "raw": "lg",
       "expected": "L",
       "predicted": "L",
-      "confidence": 0.667,
+      "score": 0.667,
       "outcome": "correct_change"
     },
     {
@@ -204,7 +205,7 @@
       "raw": "XL",
       "expected": "XL",
       "predicted": "XL",
-      "confidence": 1.0,
+      "score": 1.0,
       "outcome": "correct_change"
     },
     {
@@ -213,7 +214,7 @@
       "raw": "sm",
       "expected": "S",
       "predicted": "S",
-      "confidence": 0.667,
+      "score": 0.667,
       "outcome": "correct_change"
     },
     {
@@ -222,7 +223,7 @@
       "raw": "XXL",
       "expected": null,
       "predicted": "XL",
-      "confidence": 0.8,
+      "score": 0.8,
       "outcome": "wrong_change"
     },
     {
@@ -231,7 +232,7 @@
       "raw": "kids M",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -240,7 +241,7 @@
       "raw": "Sat/Sun",
       "expected": "weekend",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -249,7 +250,7 @@
       "raw": "weekday mornings",
       "expected": "weekday_morning",
       "predicted": "weekday_morning",
-      "confidence": 0.903,
+      "score": 0.903,
       "outcome": "correct_change"
     },
     {
@@ -258,7 +259,7 @@
       "raw": "after work weekdays",
       "expected": "weekday_evening",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -267,7 +268,7 @@
       "raw": "anytime",
       "expected": "any",
       "predicted": "any",
-      "confidence": 0.6,
+      "score": 0.6,
       "outcome": "correct_change"
     },
     {
@@ -276,7 +277,7 @@
       "raw": "Tuesdays 9am",
       "expected": "weekday_morning",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -285,7 +286,7 @@
       "raw": "only holidays",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -294,7 +295,7 @@
       "raw": "call me",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -303,7 +304,7 @@
       "raw": "NY State",
       "expected": "NY",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -312,7 +313,7 @@
       "raw": "N.J.",
       "expected": "NJ",
       "predicted": "NJ",
-      "confidence": 0.667,
+      "score": 0.667,
       "outcome": "correct_change"
     },
     {
@@ -321,7 +322,7 @@
       "raw": "Conn.",
       "expected": "CT",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -330,7 +331,7 @@
       "raw": "Pennsylvania",
       "expected": "PA",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -339,7 +340,7 @@
       "raw": "Delaware",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -348,7 +349,7 @@
       "raw": "Massachusetts",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -357,7 +358,7 @@
       "raw": "a friend told me",
       "expected": "friend",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -366,7 +367,7 @@
       "raw": "Instagram",
       "expected": "social_media",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -375,7 +376,7 @@
       "raw": "saw a poster",
       "expected": "flyer",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -384,7 +385,7 @@
       "raw": "my company",
       "expected": "employer",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -393,7 +394,7 @@
       "raw": "facebook group",
       "expected": "social_media",
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "missed"
     },
     {
@@ -402,7 +403,7 @@
       "raw": "coworker",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     },
     {
@@ -411,7 +412,7 @@
       "raw": "radio ad",
       "expected": null,
       "predicted": null,
-      "confidence": 0.0,
+      "score": 0.0,
       "outcome": "correct_abstain"
     }
   ]

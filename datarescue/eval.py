@@ -38,12 +38,15 @@ def score(decide, schema: dict, gold: dict) -> dict:
         o = outcome(value, expected)
         counts[o] += 1
         rows.append({"kind": kind, "field": field, "raw": raw, "expected": expected, "predicted": value,
-                     "confidence": d.get("confidence"), "outcome": o})
+                     "score": d.get("score"), "outcome": o})
     total = len(rows)
     changes = counts["correct_change"] + counts["wrong_change"]
     return {"total": total, **counts,
             "accuracy": round((counts["correct_change"] + counts["correct_abstain"]) / total, 3),
             "change_precision": round(counts["correct_change"] / changes, 3) if changes else None,
+            # share of items whose gold is a real target that the decider changed correctly
+            "coverage": round(counts["correct_change"] / need, 3) if (need := sum(
+                r["expected"] is not None for r in rows)) else None,
             "items": rows}
 
 
