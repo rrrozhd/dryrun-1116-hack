@@ -5,10 +5,10 @@
 - **Integrated commit:** `ae05ce0dd44fb9a7bad490f2832f98dcdfa652ae`, the current head of
   `hub/ff1ea14b-c112-4f67-96e3-8a14c1137df6` (docs card). It merges the model card
   (`82daad1`), which carries card 1, core and fixtures/eval.
-- **Runtime receipts below were produced at `15f93fb2e25142a0aa9b84e584edeeb8c850d17e`**,
-  the docs head before it. `git diff 15f93fb ae05ce0` touches only `README.md` and
-  `evidence/model/README.md` (freeze-chronology prose; no command lines changed), so no
-  code, configuration, fixture, results or command differs and the steps were not re-run.
+- **Runtime receipts (steps table, `replay.log`) were produced at
+  `15f93fb2e25142a0aa9b84e584edeeb8c850d17e`**, the docs head before it. A fresh-clone
+  revalidation of `ae05ce0` (below, [`revalidation.log`](revalidation.log)) shows only
+  freeze-chronology prose changed, so inference was not re-run.
 - **Pre-acceptance:** at replay time (2026-11-17 ~07:00 UTC) the owner had accepted no
   upstream card. If an upstream card changes, this replay must be rerun on the new head.
 - **Replayer:** dvali-d82-claude-2. It wrote no code, setup or docs for the entry; it reviewed the core card.
@@ -55,6 +55,35 @@ results could be compared. It only adds a file write; the printed summary is unc
 The held-out freeze hashes posted in the room (msg 356) match `fixtures/heldout/gold.json`,
 `input.csv` and `schema.json` at `15f93fb` and `ae05ce0` (unchanged between them). Every held-out figure in the README table
 matches the committed results files.
+
+## Revalidation of the corrected docs head `ae05ce0`
+
+Fresh clone of `hub/ff1ea14b-…` on 2026-11-17 ~07:12 UTC; raw output in
+[`revalidation.log`](revalidation.log). Every check exited 0.
+
+| Check | Result |
+|---|---|
+| `git rev-parse HEAD` | `ae05ce0dd44fb9a7bad490f2832f98dcdfa652ae` |
+| `15f93fb` is an ancestor of HEAD | yes |
+| `git diff --name-only 15f93fb HEAD` | `README.md`, `evidence/model/README.md` only (9 insertions, 3 deletions) |
+| Content of that diff | the two freeze-chronology passages (`057f738` precedes the first model/cascade held-out run `644bc5a`; baseline results earlier at `faed211`) |
+| All other paths, `git diff --quiet 15f93fb HEAD -- . ':(exclude)…'` | identical: code, `pyproject.toml`, `uv.lock`, fixtures, `results/`, other evidence |
+| README fenced code blocks (every command), sha256 at both commits | `ccd4c002…7c401275` at both; `diff` empty |
+| Held-out freeze files at HEAD | `gold.json` `af7dc8cb…b01ccae3`, `input.csv` `82fc01de…913e2aea1`, `schema.json` `cf8911f4…350e26d` |
+
+Full sha256, 15f93fb replay output vs committed file at `ae05ce0` (`cmp` also passed on all seven):
+
+| Replay output | Committed file at `ae05ce0` | sha256 (both) |
+|---|---|---|
+| `eval-baseline.json` | `results/baseline-heldout.json` | `79f32f79afc73f59282d3b966f2b710b29b9def7a580a4873329ec9c3b913599` |
+| `eval-model.json` | `results/model-heldout.json` | `5a18b1b7b377a3da178a2b8b8a307d76a3657b8417d5e5d5bd1effd5cee18b3e` |
+| `e2e-baseline.json` | `results/e2e-baseline-heldout.json` | `4180c32f3b2fa6670502a935510f62a3555fd8a574822f191bd83caec36f708d` |
+| `e2e-model.json` | `results/e2e-model-heldout.json` | `309326cd6a3c78f8d68e332cefe4a78ffa8969f0a77aa64ed2fded4f81bde08a` |
+| `model/cleaned.csv` | `evidence/model/dev-run/cleaned.csv` | `834a791fef59d65df53c3d3716c37d462204fd55a30a9822e80dc9c8d1efb6bc` |
+| `model/audit.jsonl` | `evidence/model/dev-run/audit.jsonl` | `7d19540dafd0526f95338c476aa8b06ccc3832a72aa157d355e91fe4a45843d3` |
+| `model/abstained.jsonl` | `evidence/model/dev-run/abstained.jsonl` | `65605626ed1ccb76ddfb1b7bf93ed1476e7b5b7ca74c317570770d6681fa8f78` |
+
+Since no executable input or command differs, the `15f93fb` runtime results hold for `ae05ce0`.
 
 ## Findings
 
